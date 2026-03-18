@@ -87,20 +87,18 @@
 </section>
 
 
-<!-- ==================== TEASER VIDEO ==================== -->
-<!-- Uncomment when you have a teaser video:
-<section class="section" style="padding-top: 1rem;">
+<!-- ==================== OVERVIEW IMAGE ==================== -->
+<section class="section" style="padding-top: 0.5rem; padding-bottom: 1rem;">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <video class="center" playsinline autoplay loop muted controls
-               src="./resources/teaser.mp4" width="100%"
-               style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);"></video>
+        <img src="./resources/slide-02.png" width="100%"
+             style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);"
+             alt="HumanoidMimicGen overview: from 1 human demo to 1000+ generated demos">
       </div>
     </div>
   </div>
 </section>
--->
 
 
 <!-- ==================== ABSTRACT ==================== -->
@@ -149,10 +147,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <!-- Uncomment when you have a method figure:
-        <img src="./resources/method-overview.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
-        -->
+        <img src="./resources/slide-05.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;"
+             alt="HumanoidMimicGen method: interleaving locomotion planning, manipulation planning, and skill adaptation">
         <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.75; color: #4a4a4a;">
           <p>
             HumanoidMimicGen takes a source demonstration with per-arm skill annotations and constraints governing the order of base and arm execution.
@@ -166,6 +163,9 @@
             Finally, the adapted skill segments are executed. This process repeats until all skill segments are complete.
           </p>
         </div>
+        <img src="./resources/slide-08.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-top: 1rem;"
+             alt="Planning enables demonstration generation across substantial object pose and environment variance">
       </div>
     </div>
   </div>
@@ -233,14 +233,13 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Uncomment when you have a benchmark figure:
     <div class="columns is-centered" style="margin-bottom: 2rem;">
-      <div class="column is-four-fifths">
-        <img src="./resources/benchmark.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+      <div class="column">
+        <img src="./resources/slide-09.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+             alt="G1 Loco-Manipulation Benchmark: 9 Industrial Humanoid Tasks">
       </div>
     </div>
-    -->
     <div class="task-grid">
       <div class="task-item">
         <span class="task-number">1</span>
@@ -378,6 +377,33 @@
         </p>
       </div>
     </div>
+
+    <!-- Policy rollouts -->
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column">
+        <img src="./resources/slide-11.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+             alt="HumanoidMimicGen data trains high-performing robot policies">
+      </div>
+    </div>
+
+    <!-- Baseline comparison -->
+    <div class="columns is-centered" style="margin-top: 1rem;">
+      <div class="column">
+        <img src="./resources/slide-10.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+             alt="HumanoidMimicGen outperforms DexMimicGen+">
+      </div>
+    </div>
+
+    <!-- VLA vs Flow Matching -->
+    <div class="columns is-centered" style="margin-top: 1rem;">
+      <div class="column is-four-fifths">
+        <img src="./resources/slide-12.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+             alt="HumanoidMimicGen data benefits VLAs more than simpler models">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -399,12 +425,20 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-three-fifths">
-        <!-- Uncomment when you have a real-world figure:
-        <img src="./resources/real-world.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
-        -->
-        <table class="table is-fullwidth results-table">
+      <div class="column">
+        <div class="columns is-centered" style="margin-bottom: 1.5rem;">
+          <div class="column is-half">
+            <img src="./resources/slide-13.png" width="100%"
+                 style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+                 alt="Real-world ThrowBottle task">
+          </div>
+          <div class="column is-half">
+            <img src="./resources/slide-14.png" width="100%"
+                 style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+                 alt="Real-world BoxToCart task">
+          </div>
+        </div>
+        <table class="table is-fullwidth results-table" style="max-width: 600px; margin: 0 auto;">
           <thead>
             <tr>
               <th style="text-align: left;">Task</th>
