@@ -27,57 +27,58 @@
 </head>
 <body>
 
+
+<!-- ==================== HERO ==================== -->
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="">Author Names Omitted for Anonymous Review</a></span>
+          <h1 class="title is-1 publication-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <span style="color: #2563eb;">HumanoidMimicGen</span>: Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation
+          </h1>
+
+          <div class="is-size-5 publication-authors" style="margin-bottom: 0.25rem;">
+            <span class="author-block">Author Names Omitted for Anonymous Review</span>
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-6 publication-authors" style="color: #888; margin-bottom: 0.5rem;">
             <span class="author-block">Paper-ID 851</span>
           </div>
 
-          <div class="is-size-5 publication-conference">
-            <p><strong>RSS 2025 (Under Review)</strong></p>
+          <div class="publication-conference">
+            <p><strong>RSS 2025</strong> (Under Review)</p>
           </div>
 
-          <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. -->
-                <!-- <span class="link-block">
-                  <a href=""
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href=""
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span> -->
-                <!-- Code Link. -->
-                <!-- <span class="link-block">
-                  <a href=""
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (Coming Soon)</span>
-                    </a>
-                </span> -->
-              </div>
+          <div class="column has-text-centered" style="padding-top: 0.75rem;">
+            <div class="publication-links">
+              <!-- Uncomment when ready:
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+            </div>
           </div>
         </div>
       </div>
@@ -85,51 +86,44 @@
   </div>
 </section>
 
-<!-- Teaser Figure Placeholder -->
-<!-- <section class="section">
+
+<!-- ==================== TEASER VIDEO ==================== -->
+<!-- Uncomment when you have a teaser video:
+<section class="section" style="padding-top: 1rem;">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <div class="columns is-centered">
-          <div class="column is-centered">
-            <video class="center" playsinline autoplay loop muted controls src="./resources/teaser.mp4" width="100%" style="border-radius:20px;"></video>
-          </div>
-        </div>
+        <video class="center" playsinline autoplay loop muted controls
+               src="./resources/teaser.mp4" width="100%"
+               style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);"></video>
       </div>
     </div>
   </div>
-</section> -->
-
-<br>
-<section class="hero is-light is-small">
-<div class="hero-body">
-<div class="container">
-  <div class="columns is-centered">
-    <div class="column is-three-quarters">
-      <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>HumanoidMimicGen automatically generates large datasets for humanoid loco-manipulation from a few human demonstrations</strong></h3>
-    </div>
-  </div>
-</div>
-</div>
 </section>
+-->
 
-<!-- Abstract -->
+
+<!-- ==================== ABSTRACT ==================== -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <h2 class="title is-3" style="font-family: 'Google Sans', sans-serif;">Abstract</h2>
+        <div class="section-divider"></div>
+        <div class="content has-text-justified abstract-content">
           <p>
             Imitation learning is a promising approach for training humanoid robots to simultaneously walk and manipulate, but it requires a large number of demonstrations, which are time-intensive and difficult to collect via teleoperation.
-            Existing data-generation algorithms can automatically synthesize demonstrations for manipulators.
-            But they struggle to directly transfer to humanoids because their high-dimensional composite action spaces involve arms, legs, and torsos.
+            Existing data-generation algorithms can automatically synthesize demonstrations for manipulators, but they struggle to directly transfer to humanoids because their high-dimensional composite action spaces involve arms, legs, and torsos.
+          </p>
+          <p>
             We present <strong>HumanoidMimicGen</strong>, an algorithm for generating humanoid legged loco-manipulation data.
             Our algorithm adapts contact-rich whole-body skills from a handful of source demonstrations to new states, generalizing across changes in object pose.
             By interleaving these single- and dual-arm skills with whole-body locomotion and manipulation planning, the method generates stable, collision-free data across diverse scenes and layouts.
+          </p>
+          <p>
             To evaluate our approach, we developed a new simulated loco-manipulation benchmark.
-            There, we demonstrate that HumanoidMimicGen automatically generates large datasets for imitation learning and enables a systematic study of how data generation and policy learning decisions impact model performance.
-            We show that we can use a small amount of real-world data along with HumanoidMimicGen data to effectively train capable real-world whole-body visuomotor policies.
+            We demonstrate that HumanoidMimicGen automatically generates large datasets for imitation learning and enables a systematic study of how data generation and policy learning decisions impact model performance.
+            We show that a small amount of real-world data along with HumanoidMimicGen data can effectively train capable real-world whole-body visuomotor policies.
           </p>
         </div>
       </div>
@@ -137,16 +131,17 @@
   </div>
 </section>
 
-<!-- Method Overview -->
+
+<!-- ==================== METHOD OVERVIEW ==================== -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-three-quarters">
-        <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Method Overview</strong></h3>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters has-text-centered">
+          <h3 class="title is-3" style="margin-bottom: 0;"><strong>Method Overview</strong></h3>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -154,101 +149,151 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <div class="content has-text-justified">
+        <!-- Uncomment when you have a method figure:
+        <img src="./resources/method-overview.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+        -->
+        <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.75; color: #4a4a4a;">
           <p>
-            HumanoidMimicGen takes a source demonstration with per-arm skill annotations and constraints that govern the order of base and arm execution.
-            The skill annotations and constraints are used to determine an order for skill execution, and a target end-effector pose for the beginning of each skill.
-            The <strong>Whole-Body Planning</strong> process constructs a decoupled locomotion plan and per-arm plan to achieve the targets, which are then executed by the whole-body controller and upper-body controller, respectively.
-            Finally, the adapted skill segments are executed. This process repeats until there are no more skill segments to execute.
+            HumanoidMimicGen takes a source demonstration with per-arm skill annotations and constraints governing the order of base and arm execution.
+            The skill annotations and constraints determine an execution order and a target end-effector pose for the beginning of each skill.
           </p>
-          <!-- <img src="./resources/method-overview.jpg" width="100%" style="border-radius:10px;"> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Key Contributions -->
-<section class="hero is-light is-small">
-  <div class="hero-body">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-three-quarters">
-        <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Key Contributions</strong></h3>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content">
-          <ul>
-            <li><strong>HumanoidMimicGen:</strong> An automated data generation algorithm for humanoids that uses whole-body skill adaptation and planning to synthesize loco-manipulation demonstrations from a few human demonstrations.</li>
-            <li><strong>G1 Loco-Manipulation Benchmark:</strong> A new benchmark suite of 9 simulated G1 humanoid loco-manipulation tasks, enabling reproducible comparison across methods.</li>
-            <li><strong>Humanoid Policy Learning Analysis:</strong> Experiments that study the effect of noise types, data-generation algorithms, and model architectures on policy success rates.</li>
-            <li><strong>Sim-and-Real Co-Training:</strong> Real-world results demonstrating that HumanoidMimicGen data benefits real-world policy performance through co-training.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benchmark -->
-<section class="hero is-light is-small">
-  <div class="hero-body">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-three-quarters">
-        <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>G1 Loco-Manipulation Benchmark</strong></h3>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-justified">
           <p>
-            We introduce a humanoid loco-manipulation benchmark built on robosuite and MuJoCo with <strong>9 tasks</strong> involving a simulated G1 humanoid robot.
-            Tasks vary along three axes: (i) the extent of required base motion, (ii) object interaction complexity (single-arm, bimanual, and whole-body), and (iii) execution horizon.
+            The <strong>Whole-Body Planning</strong> process constructs a decoupled locomotion plan and per-arm plan to achieve the targets, executed by the whole-body controller and upper-body controller respectively.
+            We adopt a <strong>hybrid action space</strong>: the upper body is governed by a joint-space controller, while the lower body is commanded by a reinforcement-learning policy trained to control pelvis velocity.
           </p>
-          <!-- <img src="./resources/benchmark.jpg" width="100%" style="border-radius:10px;"> -->
-          <p>The benchmark tasks are:</p>
-          <ol>
-            <li><strong>Box Lift Floor</strong> &mdash; Grasp the box from the floor and lift to a target height.</li>
-            <li><strong>Push Button</strong> &mdash; Approach an industrial panel and press its button.</li>
-            <li><strong>Box Lift</strong> &mdash; Approach the table, grasp the box, and lift to a target height.</li>
-            <li><strong>Push Shelf Forward</strong> &mdash; Push the shelving cart into a marked target zone.</li>
-            <li><strong>Drill Lift</strong> &mdash; Approach table, grasp drill, and lift to target height.</li>
-            <li><strong>Drill PnP</strong> &mdash; Pick a drill from one table and place it on a second table.</li>
-            <li><strong>Box Table To Shelf</strong> &mdash; Transfer a box from a table into a shelf.</li>
-            <li><strong>Pick Drill From Holder</strong> &mdash; Extract a drill from a holder and lift it to a target height.</li>
-            <li><strong>Drill Lift Obstacle</strong> &mdash; Navigate around a blocking shelf to reach the table, then grasp and lift the drill.</li>
-          </ol>
+          <p>
+            Finally, the adapted skill segments are executed. This process repeats until all skill segments are complete.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Results -->
+
+<!-- ==================== CONTRIBUTIONS ==================== -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-three-quarters">
-        <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>HumanoidMimicGen boosts policy success rates over baselines</strong></h3>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters has-text-centered">
+          <h3 class="title is-3" style="margin-bottom: 0;"><strong>Key Contributions</strong></h3>
+        </div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline" style="margin-top: 0.5rem;">
+      <div class="column is-half">
+        <div class="contribution-card">
+          <h4>HumanoidMimicGen Algorithm</h4>
+          <p>An automated data generation algorithm for humanoids that uses whole-body skill adaptation and planning to synthesize loco-manipulation demonstrations from a few human demonstrations.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="contribution-card">
+          <h4>G1 Loco-Manipulation Benchmark</h4>
+          <p>A new benchmark suite of 9 simulated G1 humanoid loco-manipulation tasks, enabling reproducible comparison across methods.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="contribution-card">
+          <h4>Policy Learning Analysis</h4>
+          <p>Experiments studying the effect of noise types, data-generation algorithms, and model architectures on policy success rates.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="contribution-card">
+          <h4>Sim-and-Real Co-Training</h4>
+          <p>Real-world results demonstrating that HumanoidMimicGen data benefits real-world policy performance through co-training.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== BENCHMARK ==================== -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters has-text-centered">
+          <h3 class="title is-3" style="margin-bottom: 0;"><strong>G1 Loco-Manipulation Benchmark</strong></h3>
+          <p style="margin-top: 0.75rem; font-size: 1.05rem; color: #555;">9 tasks spanning diverse loco-manipulation challenges on the Unitree G1 humanoid</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Uncomment when you have a benchmark figure:
+    <div class="columns is-centered" style="margin-bottom: 2rem;">
+      <div class="column is-four-fifths">
+        <img src="./resources/benchmark.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+      </div>
+    </div>
+    -->
+    <div class="task-grid">
+      <div class="task-item">
+        <span class="task-number">1</span>
+        <div><span class="task-name">Box Lift Floor</span><br><span class="task-desc">Grasp the box from the floor and lift to a target height.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">2</span>
+        <div><span class="task-name">Push Button</span><br><span class="task-desc">Approach an industrial panel and press its button.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">3</span>
+        <div><span class="task-name">Box Lift</span><br><span class="task-desc">Approach the table, grasp the box, and lift to a target height.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">4</span>
+        <div><span class="task-name">Push Shelf Forward</span><br><span class="task-desc">Push the shelving cart into a marked target zone.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">5</span>
+        <div><span class="task-name">Drill Lift</span><br><span class="task-desc">Approach table, grasp drill, and lift to target height.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">6</span>
+        <div><span class="task-name">Drill PnP</span><br><span class="task-desc">Pick a drill from one table and place it on a second table.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">7</span>
+        <div><span class="task-name">Box Table To Shelf</span><br><span class="task-desc">Transfer a box from a table into a shelf.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">8</span>
+        <div><span class="task-name">Pick Drill From Holder</span><br><span class="task-desc">Extract a drill from a holder and lift to a target height.</span></div>
+      </div>
+      <div class="task-item">
+        <span class="task-number">9</span>
+        <div><span class="task-name">Drill Lift Obstacle</span><br><span class="task-desc">Navigate around a blocking shelf, then grasp and lift the drill.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SIMULATION RESULTS ==================== -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters has-text-centered">
+          <h3 class="title is-3" style="margin-bottom: 0;"><strong>Simulation Results</strong></h3>
+          <p style="margin-top: 0.75rem; font-size: 1.05rem; color: #555;">HumanoidMimicGen consistently outperforms baselines across all 9 tasks</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -256,106 +301,168 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <div class="content">
-          <table class="table is-striped is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Task</th>
-                <th>Src Demo</th>
-                <th>DexMimicGen+</th>
-                <th><strong>Ours</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Box Lift Floor</td><td>0.14</td><td>0.87</td><td><strong>1.00</strong></td></tr>
-              <tr><td>Push Button</td><td>0.18</td><td>0.26</td><td><strong>1.00</strong></td></tr>
-              <tr><td>Box Lift</td><td>0.95</td><td>0.68</td><td><strong>0.98</strong></td></tr>
-              <tr><td>Push Shelf Forward</td><td>0.70</td><td>0.35</td><td><strong>0.93</strong></td></tr>
-              <tr><td>Drill Lift</td><td>0.20</td><td>0.13</td><td><strong>0.45</strong></td></tr>
-              <tr><td>Drill PnP</td><td>0.08</td><td>0.13</td><td><strong>0.17</strong></td></tr>
-              <tr><td>Box Table To Shelf</td><td>0.04</td><td>0.17</td><td><strong>0.52</strong></td></tr>
-              <tr><td>Pick Drill From Holder</td><td>0.00</td><td>0.00</td><td><strong>0.35</strong></td></tr>
-              <tr><td>Drill Lift Obstacle</td><td>0.04</td><td>0.00</td><td><strong>0.27</strong></td></tr>
-              <tr style="border-top: 2px solid #333; font-weight: bold;"><td>Average</td><td>0.26</td><td>0.16</td><td><strong>0.63</strong></td></tr>
-            </tbody>
-          </table>
-          <p class="has-text-justified">
-            We compare policies trained on source human demonstrations, DexMimicGen+-generated datasets, and HumanoidMimicGen-generated datasets.
-            Averaged over nine tasks, HumanoidMimicGen increases policy performance from 16% (DexMimicGen+) to 63%.
-          </p>
-        </div>
+        <table class="table is-fullwidth results-table">
+          <thead>
+            <tr>
+              <th style="text-align: left;">Task</th>
+              <th style="text-align: center;">Src Demo</th>
+              <th style="text-align: center;">DexMimicGen+</th>
+              <th style="text-align: center;">Ours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Box Lift Floor</td>
+              <td style="text-align: center;">0.14</td>
+              <td style="text-align: center;">0.87</td>
+              <td style="text-align: center;" class="best-result">1.00</td>
+            </tr>
+            <tr>
+              <td>Push Button</td>
+              <td style="text-align: center;">0.18</td>
+              <td style="text-align: center;">0.26</td>
+              <td style="text-align: center;" class="best-result">1.00</td>
+            </tr>
+            <tr>
+              <td>Box Lift</td>
+              <td style="text-align: center;">0.95</td>
+              <td style="text-align: center;">0.68</td>
+              <td style="text-align: center;" class="best-result">0.98</td>
+            </tr>
+            <tr>
+              <td>Push Shelf Forward</td>
+              <td style="text-align: center;">0.70</td>
+              <td style="text-align: center;">0.35</td>
+              <td style="text-align: center;" class="best-result">0.93</td>
+            </tr>
+            <tr>
+              <td>Drill Lift</td>
+              <td style="text-align: center;">0.20</td>
+              <td style="text-align: center;">0.13</td>
+              <td style="text-align: center;" class="best-result">0.45</td>
+            </tr>
+            <tr>
+              <td>Drill PnP</td>
+              <td style="text-align: center;">0.08</td>
+              <td style="text-align: center;">0.13</td>
+              <td style="text-align: center;" class="best-result">0.17</td>
+            </tr>
+            <tr>
+              <td>Box Table To Shelf</td>
+              <td style="text-align: center;">0.04</td>
+              <td style="text-align: center;">0.17</td>
+              <td style="text-align: center;" class="best-result">0.52</td>
+            </tr>
+            <tr>
+              <td>Pick Drill From Holder</td>
+              <td style="text-align: center;">0.00</td>
+              <td style="text-align: center;">0.00</td>
+              <td style="text-align: center;" class="best-result">0.35</td>
+            </tr>
+            <tr>
+              <td>Drill Lift Obstacle</td>
+              <td style="text-align: center;">0.04</td>
+              <td style="text-align: center;">0.00</td>
+              <td style="text-align: center;" class="best-result">0.27</td>
+            </tr>
+            <tr class="summary-row">
+              <td>Average</td>
+              <td style="text-align: center;">0.26</td>
+              <td style="text-align: center;">0.16</td>
+              <td style="text-align: center;" class="best-result">0.63</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="text-align: center; color: #666; font-size: 0.95rem; margin-top: 1rem;">
+          Policies trained on 1,000 HumanoidMimicGen demonstrations generated from a single human demonstration per task.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Real World -->
+
+<!-- ==================== REAL-WORLD ==================== -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-three-quarters">
-        <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Sim-and-Real Co-Training Boosts Real-World Performance</strong></h3>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters has-text-centered">
+          <h3 class="title is-3" style="margin-bottom: 0;"><strong>Real-World Results</strong></h3>
+          <p style="margin-top: 0.75rem; font-size: 1.05rem; color: #555;">Sim-and-real co-training boosts real-world policy performance</p>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content">
-          <!-- <img src="./resources/real-world.jpg" width="100%" style="border-radius:10px;"> -->
-          <table class="table is-striped is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Task</th>
-                <th>Real Only</th>
-                <th><strong>Sim + Real</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>ThrowBottle</td><td>0.60</td><td><strong>0.75</strong></td></tr>
-              <tr><td>BoxToCart</td><td>0.35</td><td><strong>0.60</strong></td></tr>
-              <tr style="border-top: 2px solid #333; font-weight: bold;"><td>Average</td><td>0.48</td><td><strong>0.68</strong></td></tr>
-            </tbody>
-          </table>
-          <p class="has-text-justified">
-            Policies co-trained on HumanoidMimicGen-generated simulation data and 30 real-world demonstrations outperform policies trained only on real data.
-            On average, sim-and-real co-training improves policy performance from 0.48 to 0.68.
-          </p>
-        </div>
+      <div class="column is-three-fifths">
+        <!-- Uncomment when you have a real-world figure:
+        <img src="./resources/real-world.png" width="100%"
+             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+        -->
+        <table class="table is-fullwidth results-table">
+          <thead>
+            <tr>
+              <th style="text-align: left;">Task</th>
+              <th style="text-align: center;">Real Only</th>
+              <th style="text-align: center;">Sim + Real</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ThrowBottle</td>
+              <td style="text-align: center;">0.60</td>
+              <td style="text-align: center;" class="best-result">0.75</td>
+            </tr>
+            <tr>
+              <td>BoxToCart</td>
+              <td style="text-align: center;">0.35</td>
+              <td style="text-align: center;" class="best-result">0.60</td>
+            </tr>
+            <tr class="summary-row">
+              <td>Average</td>
+              <td style="text-align: center;">0.48</td>
+              <td style="text-align: center;" class="best-result">0.68</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="text-align: center; color: #666; font-size: 0.95rem; margin-top: 1rem;">
+          Co-trained on 500 HumanoidMimicGen simulation demos + 30 real-world demos. Evaluated over 10 episodes.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BibTeX -->
+
+<!-- ==================== BIBTEX ==================== -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title is-3" style="text-align: center;">BibTeX</h2>
+    <div class="section-divider"></div>
     <pre><code>@inproceedings{humanoidmimicgen2025,
-      title     = {HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation},
-      author    = {Anonymous},
-      booktitle = {Robotics: Science and Systems (RSS)},
-      year      = {2025}
-}
-    </code></pre>
+  title     = {HumanoidMimicGen: Data Generation for Loco-Manipulation
+               via Whole-Body Planning and Adaptation},
+  author    = {Anonymous},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2025}
+}</code></pre>
   </div>
 </section>
 
 
+<!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-8 has-text-centered">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
             Website template borrowed from <a href="https://nerfies.github.io/">NeRFies</a>.
