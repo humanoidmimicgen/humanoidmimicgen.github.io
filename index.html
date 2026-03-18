@@ -87,14 +87,14 @@
 </section>
 
 
-<!-- ==================== OVERVIEW IMAGE ==================== -->
+<!-- ==================== TEASER VIDEO ==================== -->
 <section class="section" style="padding-top: 0.5rem; padding-bottom: 1rem;">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <img src="./resources/slide-02.png" width="100%"
-             style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);"
-             alt="HumanoidMimicGen overview: from 1 human demo to 1000+ generated demos">
+        <video class="center" playsinline autoplay loop muted
+               src="./resources/teaser.mp4" width="100%"
+               style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);"></video>
       </div>
     </div>
   </div>
@@ -147,9 +147,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <img src="./resources/slide-05.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;"
-             alt="HumanoidMimicGen method: interleaving locomotion planning, manipulation planning, and skill adaptation">
+        <video class="center" playsinline autoplay loop muted
+               src="./resources/method.mp4" width="100%"
+               style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem;"></video>
         <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.75; color: #4a4a4a;">
           <p>
             HumanoidMimicGen takes a source demonstration with per-arm skill annotations and constraints governing the order of base and arm execution.
@@ -163,9 +163,9 @@
             Finally, the adapted skill segments are executed. This process repeats until all skill segments are complete.
           </p>
         </div>
-        <img src="./resources/slide-08.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-top: 1rem;"
-             alt="Planning enables demonstration generation across substantial object pose and environment variance">
+        <video class="center" playsinline autoplay loop muted
+               src="./resources/planning-variance.mp4" width="100%"
+               style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-top: 1rem;"></video>
       </div>
     </div>
   </div>
@@ -381,22 +381,22 @@
     <!-- Policy rollouts -->
     <div class="columns is-centered" style="margin-top: 2rem;">
       <div class="column">
-        <img src="./resources/slide-11.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
-             alt="HumanoidMimicGen data trains high-performing robot policies">
+        <video class="center" playsinline autoplay loop muted
+               src="./resources/policy-rollouts.mp4" width="100%"
+               style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
       </div>
     </div>
 
     <!-- Baseline comparison -->
     <div class="columns is-centered" style="margin-top: 1rem;">
       <div class="column">
-        <img src="./resources/slide-10.png" width="100%"
-             style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
-             alt="HumanoidMimicGen outperforms DexMimicGen+">
+        <video class="center" playsinline autoplay loop muted
+               src="./resources/baseline-comparison.mp4" width="100%"
+               style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
       </div>
     </div>
 
-    <!-- VLA vs Flow Matching -->
+    <!-- VLA vs Flow Matching (keep as image - it's a static chart) -->
     <div class="columns is-centered" style="margin-top: 1rem;">
       <div class="column is-four-fifths">
         <img src="./resources/slide-12.png" width="100%"
@@ -428,14 +428,16 @@
       <div class="column">
         <div class="columns is-centered" style="margin-bottom: 1.5rem;">
           <div class="column is-half">
-            <img src="./resources/slide-13.png" width="100%"
-                 style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
-                 alt="Real-world ThrowBottle task">
+            <video class="center" playsinline autoplay loop muted
+                   src="./resources/real-throwbottle.mp4" width="100%"
+                   style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+            <p style="text-align: center; font-weight: 600; margin-top: 0.5rem;">ThrowBottle</p>
           </div>
           <div class="column is-half">
-            <img src="./resources/slide-14.png" width="100%"
-                 style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
-                 alt="Real-world BoxToCart task">
+            <video class="center" playsinline autoplay loop muted
+                   src="./resources/real-boxtocart.mp4" width="100%"
+                   style="border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+            <p style="text-align: center; font-weight: 600; margin-top: 0.5rem;">BoxToCart</p>
           </div>
         </div>
         <table class="table is-fullwidth results-table" style="max-width: 600px; margin: 0 auto;">
