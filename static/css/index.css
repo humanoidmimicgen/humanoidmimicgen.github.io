@@ -134,10 +134,37 @@ body {
 .nv-hero {
   background: var(--bg-dark);
   color: #fff;
-  padding: 8rem 1.5rem 5rem;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 1.5rem 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.nv-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.nv-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.85) 100%);
+}
+
+.nv-hero .nv-container {
+  position: relative;
+  z-index: 2;
 }
 
 .nv-hero::after {
@@ -146,9 +173,19 @@ body {
   left: 0; right: 0; bottom: 0;
   height: 3px;
   background: var(--nv-green);
+  z-index: 3;
 }
 
 .nv-hero .display-1 .accent { color: var(--nv-green); }
+
+.nv-hero .lede {
+  color: #e8e8ed;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+}
+
+.nv-hero .display-1 {
+  text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+}
 
 .nv-hero .meta {
   font-size: 1rem;
