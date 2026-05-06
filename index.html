@@ -222,25 +222,77 @@
 <!-- ==================== REAL-WORLD ==================== -->
 <section class="nv-section dark" id="real-world">
   <div class="nv-container wide">
-    <div style="max-width: 720px;">
+    <div style="max-width: 760px;">
       <p class="eyebrow">Real-World</p>
-      <h2 class="display-2">Sim + real co-training.</h2>
-      <p class="lede">Co-training with HumanoidMimicGen simulation data lifts real-world policy success from 0.51 to 0.71 across four tasks.</p>
+      <h2 class="display-2">Sim + real co-training wins on every task.</h2>
+      <p class="lede">Co-training with HumanoidMimicGen simulation data lifts real-world policy success from 0.51 to 0.71 across four tasks. Watch the same task side by side — co-trained policies recover where real-only ones fail.</p>
       <hr class="nv-rule">
     </div>
 
-    <div class="nv-split">
-      <div>
-        <video playsinline autoplay loop muted src="./resources/real-throwbottle.mp4"></video>
-        <p class="media-caption">ThrowBottle</p>
+    <div class="compare-tabs" role="tablist">
+      <button class="active" data-task="throwbottle">ThrowBottle</button>
+      <button data-task="boxtocart">BoxToCart</button>
+      <button data-task="pickcannister">PickCannister</button>
+      <button data-task="pickcannisterobs">PickCannister + Obstruction</button>
+    </div>
+
+    <!-- ThrowBottle -->
+    <div class="compare-panel active" data-task="throwbottle">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
+        <div class="h">Real Only · 0.60</div>
       </div>
-      <div>
-        <video playsinline autoplay loop muted src="./resources/real-boxtocart.mp4"></video>
-        <p class="media-caption">BoxToCart</p>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-realonly-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-realonly-fail.mp4"></video></div>
       </div>
     </div>
 
-    <table class="nv-table" style="max-width: 720px; margin: 3rem auto 0;">
+    <!-- BoxToCart -->
+    <div class="compare-panel" data-task="boxtocart">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.60</div>
+        <div class="h">Real Only · 0.35</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
+    <!-- PickCannister -->
+    <div class="compare-panel" data-task="pickcannister">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
+        <div class="h">Real Only · 0.50</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
+    <!-- PickCannister + Obstruction -->
+    <div class="compare-panel" data-task="pickcannisterobs">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
+        <div class="h">Real Only · 0.60</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-realonly-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
+    <table class="nv-table" style="max-width: 760px; margin: 4rem auto 0;">
       <thead>
         <tr>
           <th>Task</th>
@@ -256,7 +308,7 @@
         <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>0.51</td><td class="best" style="color:#fff;">0.71</td></tr>
       </tbody>
     </table>
-    <p class="media-caption" style="color:#86868b;">Policies co-trained on HumanoidMimicGen-generated simulation data and real-world demonstrations outperform real-only training across four real-world manipulation tasks.</p>
+    <p class="media-caption" style="color:#86868b;">Policies co-trained on HumanoidMimicGen-generated simulation data and real-world demonstrations outperform real-only training across all four tasks.</p>
   </div>
 </section>
 
@@ -287,8 +339,9 @@
 </footer>
 
 
-<!-- ==================== REVEAL ON SCROLL ==================== -->
+<!-- ==================== REVEAL + COMPARE TABS ==================== -->
 <script>
+  // Reveal on scroll
   (function () {
     var els = document.querySelectorAll('.nv-section, .media-bleed');
     els.forEach(function (el) { el.classList.add('reveal'); });
@@ -305,6 +358,39 @@
     } else {
       els.forEach(function (el) { el.classList.add('in'); });
     }
+  })();
+
+  // Real-world comparison tabs
+  (function () {
+    var tabs = document.querySelectorAll('.compare-tabs button');
+    var panels = document.querySelectorAll('.compare-panel');
+
+    function activate(taskKey) {
+      tabs.forEach(function (b) {
+        b.classList.toggle('active', b.dataset.task === taskKey);
+      });
+      panels.forEach(function (p) {
+        var on = p.dataset.task === taskKey;
+        p.classList.toggle('active', on);
+        p.querySelectorAll('video').forEach(function (v) {
+          if (on) {
+            if (v.preload !== 'auto') v.preload = 'auto';
+            var play = v.play(); if (play && play.catch) play.catch(function () {});
+          } else {
+            v.pause();
+          }
+        });
+      });
+    }
+
+    tabs.forEach(function (b) {
+      b.addEventListener('click', function () { activate(b.dataset.task); });
+    });
+
+    // Kick off the initial active panel (autoplay started inline; this just
+    // ensures any pre-paused videos start when their tab is selected).
+    var initial = document.querySelector('.compare-tabs button.active');
+    if (initial) activate(initial.dataset.task);
   })();
 </script>
 
