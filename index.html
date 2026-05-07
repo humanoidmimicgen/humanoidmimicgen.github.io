@@ -58,30 +58,30 @@
       <div class="real-carousel-viewport">
         <div class="real-carousel-track">
           <figure class="real-carousel-slide active" aria-hidden="false">
-            <video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
-            <figcaption><span>ThrowBottle</span><small>Sim + real success</small></figcaption>
+            <video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
+            <figcaption><span>BoxToCart</span><small>Sim + real success</small></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
-            <figcaption><span>BoxToCart</span><small>Sim + real success</small></figcaption>
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
+            <figcaption><span>PickCanister + Obstruction</span><small>Sim + real success</small></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
             <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
             <figcaption><span>PickCanister</span><small>Sim + real success</small></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
-            <figcaption><span>PickCanister + Obstruction</span><small>Sim + real success</small></figcaption>
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
+            <figcaption><span>ThrowBottle</span><small>Sim + real success</small></figcaption>
           </figure>
         </div>
         <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">&lsaquo;</button>
         <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout">&rsaquo;</button>
       </div>
       <div class="real-carousel-dots" role="tablist" aria-label="Choose real-world rollout">
-        <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show ThrowBottle rollout" data-index="0"></button>
-        <button type="button" role="tab" aria-selected="false" aria-label="Show BoxToCart rollout" data-index="1"></button>
+        <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show BoxToCart rollout" data-index="0"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister with obstruction rollout" data-index="1"></button>
         <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister rollout" data-index="2"></button>
-        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister with obstruction rollout" data-index="3"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show ThrowBottle rollout" data-index="3"></button>
       </div>
     </div>
   </div>
@@ -345,9 +345,19 @@
       </div>
     </div>
 
-    <div class="media-block">
-      <video playsinline autoplay loop muted src="./resources/baseline-comparison.mp4"></video>
-      <p class="media-caption">Side-by-side comparison against baselines.</p>
+    <div class="media-block baseline-compare-block">
+      <h3 class="rollout-heading">HumanoidMimicGen outperforms DexMimicGen+</h3>
+      <div class="baseline-compare-grid" aria-label="DexMimicGen+ baseline versus HumanoidMimicGen">
+        <figure class="baseline-compare-card">
+          <figcaption><span>DexMimicGen+</span><small>DGR: 0%</small></figcaption>
+          <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/dexmimicgen-failure.mp4"></video>
+        </figure>
+        <figure class="baseline-compare-card">
+          <figcaption><span>Humanoid-MG</span><small>DGR: 79%</small></figcaption>
+          <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/humanoidmg-success.mp4"></video>
+        </figure>
+      </div>
+      <p class="media-caption">Side-by-side raw rollouts comparing DexMimicGen+ against HumanoidMimicGen.</p>
     </div>
 
   </div>
@@ -365,51 +375,23 @@
     </div>
 
     <div class="compare-tabs" role="tablist">
-      <button class="active" data-task="throwbottle">ThrowBottle</button>
-      <button data-task="boxtocart">BoxToCart</button>
-      <button data-task="pickcanister">PickCanister</button>
+      <button class="active" data-task="boxtocart">BoxToCart</button>
       <button data-task="pickcanisterobs">PickCanister + Obstruction</button>
-    </div>
-
-    <!-- ThrowBottle -->
-    <div class="compare-panel active" data-task="throwbottle">
-      <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
-        <div class="h">Real Only · 0.60</div>
-      </div>
-      <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-realonly-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-realonly-fail.mp4"></video></div>
-      </div>
+      <button data-task="pickcanister">PickCanister</button>
+      <button data-task="throwbottle">ThrowBottle</button>
     </div>
 
     <!-- BoxToCart -->
-    <div class="compare-panel" data-task="boxtocart">
+    <div class="compare-panel active" data-task="boxtocart">
       <div class="compare-headers">
         <div class="h cotrain">Sim + Real Co-training · 0.60</div>
         <div class="h">Real Only · 0.35</div>
       </div>
       <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-realonly-fail2.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/boxtocart-realonly-fail.mp4"></video></div>
-      </div>
-    </div>
-
-    <!-- PickCanister -->
-    <div class="compare-panel" data-task="pickcanister">
-      <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
-        <div class="h">Real Only · 0.50</div>
-      </div>
-      <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail2.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-realonly-fail.mp4"></video></div>
       </div>
     </div>
 
@@ -427,6 +409,34 @@
       </div>
     </div>
 
+    <!-- PickCanister -->
+    <div class="compare-panel" data-task="pickcanister">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
+        <div class="h">Real Only · 0.50</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
+    <!-- ThrowBottle -->
+    <div class="compare-panel" data-task="throwbottle">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
+        <div class="h">Real Only · 0.60</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/throwbottle-realonly-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/throwbottle-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/throwbottle-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
     <table class="nv-table" style="max-width: 760px; margin: 4rem auto 0;">
       <thead>
         <tr>
@@ -436,10 +446,10 @@
         </tr>
       </thead>
       <tbody style="color: #c7c7cc;">
-        <tr><td style="color:#fff;">ThrowBottle</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
         <tr><td style="color:#fff;">BoxToCart</td><td>0.35</td><td class="best" style="color:#fff;">0.60</td></tr>
-        <tr><td style="color:#fff;">PickCanister</td><td>0.50</td><td class="best" style="color:#fff;">0.75</td></tr>
         <tr><td style="color:#fff;">PickCanisterWithObstruction</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
+        <tr><td style="color:#fff;">PickCanister</td><td>0.50</td><td class="best" style="color:#fff;">0.75</td></tr>
+        <tr><td style="color:#fff;">ThrowBottle</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
         <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>0.51</td><td class="best" style="color:#fff;">0.71</td></tr>
       </tbody>
     </table>
