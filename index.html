@@ -44,6 +44,50 @@
 </section>
 
 
+<!-- ==================== REAL-WORLD SUCCESS REEL ==================== -->
+<section class="nv-section dark compact">
+  <div class="nv-container wide">
+    <div style="max-width: 760px;">
+      <p class="eyebrow">Real-World Results</p>
+      <h2 class="display-2">HumanoidMimicGen enables hardware success.</h2>
+      <p class="lede">Co-trained policies succeed across four real-world tasks, showing how generated simulation data transfers to physical humanoid rollouts.</p>
+      <hr class="nv-rule">
+    </div>
+
+    <div class="real-carousel" role="region" aria-roledescription="carousel" aria-label="Real-world HumanoidMimicGen success rollouts">
+      <div class="real-carousel-viewport">
+        <div class="real-carousel-track">
+          <figure class="real-carousel-slide active" aria-hidden="false">
+            <video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
+            <figcaption><span>ThrowBottle</span><small>Sim + real success</small></figcaption>
+          </figure>
+          <figure class="real-carousel-slide" aria-hidden="true">
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
+            <figcaption><span>BoxToCart</span><small>Sim + real success</small></figcaption>
+          </figure>
+          <figure class="real-carousel-slide" aria-hidden="true">
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
+            <figcaption><span>PickCanister</span><small>Sim + real success</small></figcaption>
+          </figure>
+          <figure class="real-carousel-slide" aria-hidden="true">
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
+            <figcaption><span>PickCanister + Obstruction</span><small>Sim + real success</small></figcaption>
+          </figure>
+        </div>
+        <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">&lsaquo;</button>
+        <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout">&rsaquo;</button>
+      </div>
+      <div class="real-carousel-dots" role="tablist" aria-label="Choose real-world rollout">
+        <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show ThrowBottle rollout" data-index="0"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show BoxToCart rollout" data-index="1"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister rollout" data-index="2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister with obstruction rollout" data-index="3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ==================== ABSTRACT ==================== -->
 <section class="nv-section" id="abstract">
   <div class="nv-container">
@@ -146,20 +190,79 @@
       <hr class="nv-rule">
     </div>
 
-    <div class="media-block">
-      <img src="./resources/slide-09.png" alt="G1 Loco-Manipulation Benchmark: 9 Industrial Humanoid Tasks">
-    </div>
-
-    <div class="task-list">
-      <div class="task"><div class="num">01</div><h5>Box Lift Floor</h5><p>Grasp the box from the floor and lift to a target height.</p></div>
-      <div class="task"><div class="num">02</div><h5>Push Button</h5><p>Approach an industrial panel and press its button.</p></div>
-      <div class="task"><div class="num">03</div><h5>Box Lift</h5><p>Approach the table, grasp the box, and lift to a target height.</p></div>
-      <div class="task"><div class="num">04</div><h5>Push Shelf Forward</h5><p>Push the shelving cart into a marked target zone.</p></div>
-      <div class="task"><div class="num">05</div><h5>Drill Lift</h5><p>Approach a table, grasp a drill, and lift to a target height.</p></div>
-      <div class="task"><div class="num">06</div><h5>Drill PnP</h5><p>Pick a drill from one table and place it on a second table.</p></div>
-      <div class="task"><div class="num">07</div><h5>Box Table To Shelf</h5><p>Transfer a box from a table into a shelf.</p></div>
-      <div class="task"><div class="num">08</div><h5>Pick Drill From Holder</h5><p>Extract a drill from a holder and lift to a target height.</p></div>
-      <div class="task"><div class="num">09</div><h5>Drill Lift Obstacle</h5><p>Navigate around a blocking shelf, then grasp and lift the drill.</p></div>
+    <div class="benchmark-task-grid" aria-label="G1 loco-manipulation benchmark task images">
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/box-lift-floor.png" alt="Box Lift Floor task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">01</span>
+          <span class="benchmark-task-title">Box Lift Floor</span>
+          <span class="benchmark-task-desc">Grasp the box from the floor and lift to a target height.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/push-button.png" alt="Push Button task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">02</span>
+          <span class="benchmark-task-title">Push Button</span>
+          <span class="benchmark-task-desc">Approach an industrial panel and press its button.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/box-lift.png" alt="Box Lift task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">03</span>
+          <span class="benchmark-task-title">Box Lift</span>
+          <span class="benchmark-task-desc">Approach the table, grasp the box, and lift to a target height.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/push-shelf-forward.png" alt="Push Shelf Forward task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">04</span>
+          <span class="benchmark-task-title">Push Shelf Forward</span>
+          <span class="benchmark-task-desc">Push the shelving cart into a marked target zone.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/drill-lift.png" alt="Drill Lift task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">05</span>
+          <span class="benchmark-task-title">Drill Lift</span>
+          <span class="benchmark-task-desc">Approach a table, grasp a drill, and lift to a target height.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/drill-pnp.png" alt="Drill PnP task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">06</span>
+          <span class="benchmark-task-title">Drill PnP</span>
+          <span class="benchmark-task-desc">Pick a drill from one table and place it on a second table.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/box-table-to-shelf.png" alt="Box Table To Shelf task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">07</span>
+          <span class="benchmark-task-title">Box Table To Shelf</span>
+          <span class="benchmark-task-desc">Transfer a box from a table into a shelf.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/pick-drill-from-holder.png" alt="Pick Drill From Holder task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">08</span>
+          <span class="benchmark-task-title">Pick Drill From Holder</span>
+          <span class="benchmark-task-desc">Extract a drill from a holder and lift to a target height.</span>
+        </figcaption>
+      </figure>
+      <figure class="benchmark-task-figure">
+        <img src="./resources/benchmark-tasks/drill-lift-obstacle.png" alt="Drill Lift Obstacle task snapshots">
+        <figcaption>
+          <span class="benchmark-task-num">09</span>
+          <span class="benchmark-task-title">Drill Lift Obstacle</span>
+          <span class="benchmark-task-desc">Navigate around a blocking shelf, then grasp and lift the drill.</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -201,8 +304,45 @@
     <p class="media-caption">Success rates across benchmark tasks for policies trained on source human demonstrations, DexMimicGen+, 100 human demonstrations, and HumanoidMimicGen datasets.</p>
 
     <div class="media-block">
-      <video playsinline autoplay loop muted src="./resources/policy-rollouts.mp4"></video>
-      <p class="media-caption">Policy rollouts on the G1 humanoid.</p>
+      <h3 class="rollout-heading">Policy rollouts</h3>
+      <div class="rollout-grid" aria-label="Policy rollouts on G1 humanoid benchmark tasks">
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMBoxLiftFloor.mp4"></video>
+          <figcaption><span class="rollout-title">Box Lift Floor</span><span class="rollout-rate">Success Rate: 97%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMPushButton.mp4"></video>
+          <figcaption><span class="rollout-title">Push Button</span><span class="rollout-rate">Success Rate: 92%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMBoxLift.mp4"></video>
+          <figcaption><span class="rollout-title">Box Lift</span><span class="rollout-rate">Success Rate: 100%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMPushShelfForward.mp4"></video>
+          <figcaption><span class="rollout-title">Push Shelf Forward</span><span class="rollout-rate">Success Rate: 100%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMDrillLift.mp4"></video>
+          <figcaption><span class="rollout-title">Drill Lift</span><span class="rollout-rate">Success Rate: 100%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMDrillPnP90_Take2.mp4"></video>
+          <figcaption><span class="rollout-title">Drill PnP</span><span class="rollout-rate">Success Rate: 70%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMBoxTableToShelfIndustrial.mp4"></video>
+          <figcaption><span class="rollout-title">Box Table To Shelf</span><span class="rollout-rate">Success Rate: 53%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMPickDrillFromHolder.mp4"></video>
+          <figcaption><span class="rollout-title">Pick Drill From Holder</span><span class="rollout-rate">Success Rate: 100%</span></figcaption>
+        </figure>
+        <figure class="rollout-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMDrillLiftObstacle.mp4"></video>
+          <figcaption><span class="rollout-title">Drill Lift Obstacle</span><span class="rollout-rate">Success Rate: 87%</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="media-block">
@@ -210,10 +350,6 @@
       <p class="media-caption">Side-by-side comparison against baselines.</p>
     </div>
 
-    <div class="media-block" style="max-width: 820px; margin: 4rem auto;">
-      <img src="./resources/slide-12.png" alt="HumanoidMimicGen data benefits VLAs more than simpler models">
-      <p class="media-caption">HumanoidMimicGen data benefits VLAs more than simpler models.</p>
-    </div>
   </div>
 </section>
 
@@ -231,8 +367,8 @@
     <div class="compare-tabs" role="tablist">
       <button class="active" data-task="throwbottle">ThrowBottle</button>
       <button data-task="boxtocart">BoxToCart</button>
-      <button data-task="pickcannister">PickCannister</button>
-      <button data-task="pickcannisterobs">PickCannister + Obstruction</button>
+      <button data-task="pickcanister">PickCanister</button>
+      <button data-task="pickcanisterobs">PickCanister + Obstruction</button>
     </div>
 
     <!-- ThrowBottle -->
@@ -263,31 +399,31 @@
       </div>
     </div>
 
-    <!-- PickCannister -->
-    <div class="compare-panel" data-task="pickcannister">
+    <!-- PickCanister -->
+    <div class="compare-panel" data-task="pickcanister">
       <div class="compare-headers">
         <div class="h cotrain">Sim + Real Co-training · 0.75</div>
         <div class="h">Real Only · 0.50</div>
       </div>
       <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-realonly-fail2.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannister-realonly-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video></div>
       </div>
     </div>
 
-    <!-- PickCannister + Obstruction -->
-    <div class="compare-panel" data-task="pickcannisterobs">
+    <!-- PickCanister + Obstruction -->
+    <div class="compare-panel" data-task="pickcanisterobs">
       <div class="compare-headers">
         <div class="h cotrain">Sim + Real Co-training · 0.75</div>
         <div class="h">Real Only · 0.60</div>
       </div>
       <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-realonly-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcannisterobs-realonly-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanisterobs-realonly-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanisterobs-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanisterobs-realonly-fail.mp4"></video></div>
       </div>
     </div>
 
@@ -302,8 +438,8 @@
       <tbody style="color: #c7c7cc;">
         <tr><td style="color:#fff;">ThrowBottle</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
         <tr><td style="color:#fff;">BoxToCart</td><td>0.35</td><td class="best" style="color:#fff;">0.60</td></tr>
-        <tr><td style="color:#fff;">PickCannister</td><td>0.50</td><td class="best" style="color:#fff;">0.75</td></tr>
-        <tr><td style="color:#fff;">PickCannisterWithObstruction</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
+        <tr><td style="color:#fff;">PickCanister</td><td>0.50</td><td class="best" style="color:#fff;">0.75</td></tr>
+        <tr><td style="color:#fff;">PickCanisterWithObstruction</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
         <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>0.51</td><td class="best" style="color:#fff;">0.71</td></tr>
       </tbody>
     </table>
@@ -357,6 +493,92 @@
     } else {
       els.forEach(function (el) { el.classList.add('in'); });
     }
+  })();
+
+  // Real-world video carousel
+  (function () {
+    var carousel = document.querySelector('.real-carousel');
+    if (!carousel) return;
+
+    var track = carousel.querySelector('.real-carousel-track');
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.real-carousel-slide'));
+    var dots = Array.prototype.slice.call(carousel.querySelectorAll('.real-carousel-dots button'));
+    var prev = carousel.querySelector('.real-carousel-arrow.prev');
+    var next = carousel.querySelector('.real-carousel-arrow.next');
+    var current = 0;
+    var timer = null;
+
+    function playVideo(video, restart) {
+      if (restart) {
+        try { video.currentTime = 0; } catch (e) {}
+      }
+      var play = video.play();
+      if (play && play.catch) play.catch(function () {});
+    }
+
+    function show(index, restart) {
+      index = (index + slides.length) % slides.length;
+      current = index;
+      track.style.transform = 'translateX(' + (-100 * index) + '%)';
+      slides.forEach(function (slide, i) {
+        var active = i === index;
+        var video = slide.querySelector('video');
+        slide.classList.toggle('active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+        if (active) {
+          playVideo(video, restart);
+        } else {
+          video.pause();
+        }
+      });
+      dots.forEach(function (button, i) {
+        var active = i === index;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+    }
+
+    function start() {
+      stop();
+      timer = window.setInterval(function () {
+        show((current + 1) % slides.length, true);
+      }, 6500);
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    dots.forEach(function (button, i) {
+      button.addEventListener('click', function () {
+        show(i, true);
+        start();
+      });
+    });
+
+    prev.addEventListener('click', function () {
+      show(current - 1, true);
+      start();
+    });
+    next.addEventListener('click', function () {
+      show(current + 1, true);
+      start();
+    });
+
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stop();
+      } else {
+        show(current, false);
+        start();
+      }
+    });
+
+    show(0, false);
+    start();
   })();
 
   // Real-world comparison tabs

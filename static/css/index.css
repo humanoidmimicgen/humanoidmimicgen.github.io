@@ -230,6 +230,59 @@ body {
 
 .dark .media-caption { color: #86868b; }
 
+.rollout-heading {
+  color: var(--ink);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.rollout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem 1.5rem;
+  margin: 0;
+}
+
+.rollout-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.rollout-card video,
+.rollout-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  background: #000;
+  border-radius: 8px;
+}
+
+.rollout-card figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.rollout-title {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.rollout-rate {
+  display: block;
+  color: var(--ink-mute);
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin-top: 0.25rem;
+}
+
 /* ----- Numbered rows (replaces contribution cards) ----- */
 
 .nv-list {
@@ -300,48 +353,65 @@ body {
   .nv-split.reverse > :first-child { order: 0; }
 }
 
-/* ----- Task spec list ----- */
+/* ----- Benchmark task grid ----- */
 
-.task-list {
+.benchmark-task-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--hairline);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 1.25rem;
+  margin: 3rem 0 0;
 }
 
-.task-list .task {
-  padding: 1.75rem 1.5rem;
-  border-bottom: 1px solid var(--hairline);
-  border-right: 1px solid var(--hairline);
+.benchmark-task-figure {
+  margin: 0;
+  min-width: 0;
 }
 
-.task-list .task:nth-child(3n) { border-right: 0; }
+.benchmark-task-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  height: auto;
+  object-fit: cover;
+  background: #eef3f8;
+  border-radius: 6px;
+}
 
-.task-list .task .num {
+.benchmark-task-figure figcaption {
+  display: block;
+  color: var(--ink-soft);
+  margin-top: 0.85rem;
+  text-align: left;
+}
+
+.benchmark-task-num {
+  display: block;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--nv-green);
   letter-spacing: 0.1em;
+  line-height: 1;
 }
 
-.task-list .task h5 {
+.benchmark-task-title {
+  display: block;
+  color: var(--ink);
   font-size: 1.15rem;
   font-weight: 600;
   margin: 0.4rem 0 0.4rem;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  line-height: 1.2;
 }
 
-.task-list .task p {
+.benchmark-task-desc {
+  display: block;
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--ink-mute);
-  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .task-list { grid-template-columns: 1fr; }
-  .task-list .task { border-right: 0; }
+  .benchmark-task-grid { grid-template-columns: 1fr; }
 }
 
 /* ----- Results table ----- */
@@ -403,6 +473,124 @@ body {
 }
 
 /* ----- Comparison grid: cotrain vs real-only ----- */
+
+.real-carousel {
+  margin: 3rem 0 0;
+}
+
+.real-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.real-carousel-track {
+  display: flex;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.real-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+}
+
+.real-carousel-slide::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.72) 100%);
+  pointer-events: none;
+}
+
+.real-carousel-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.real-carousel-slide figcaption {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+}
+
+.real-carousel-slide figcaption span {
+  font-size: clamp(1.35rem, 2.5vw, 2.35rem);
+  font-weight: 650;
+  line-height: 1;
+}
+
+.real-carousel-slide figcaption small {
+  color: #d1d1d6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.real-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 2.75rem;
+  height: 2.75rem;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 50%;
+  background: rgba(0,0,0,0.34);
+  color: #fff;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.real-carousel-arrow:hover {
+  background: rgba(118, 185, 0, 0.55);
+  border-color: var(--nv-green);
+}
+
+.real-carousel-arrow.prev { left: 0.9rem; }
+.real-carousel-arrow.next { right: 0.9rem; }
+
+.real-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.real-carousel-dots button {
+  width: 0.72rem;
+  height: 0.72rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.34);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.real-carousel-dots button:hover,
+.real-carousel-dots button.active {
+  background: var(--nv-green);
+  transform: scale(1.2);
+}
 
 .compare-tabs {
   display: flex;
@@ -519,9 +707,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  .real-carousel-slide figcaption { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
+  .real-carousel-arrow { width: 2.25rem; height: 2.25rem; font-size: 1.6rem; }
   .compare-headers, .compare-grid { grid-template-columns: 1fr; }
   .compare-grid { gap: 0.75rem; }
   .compare-headers .h { text-align: left; padding: 0; }
+}
+
+@media (max-width: 1024px) {
+  .benchmark-task-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rollout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ----- BibTeX ----- */
@@ -609,6 +804,8 @@ body {
 @media (max-width: 768px) {
   .nv-section { padding: 4rem 1.25rem; }
   .nv-hero { padding: 5rem 1.25rem 3.5rem; }
+  .benchmark-task-grid { grid-template-columns: 1fr; }
+  .rollout-grid { grid-template-columns: 1fr; gap: 1.4rem; }
   .nv-list .row { grid-template-columns: 60px 1fr; gap: 1rem; padding: 1.5rem 0; }
   .nv-list .row h4 { font-size: 1.2rem; }
   .nv-table { font-size: 0.85rem; }
