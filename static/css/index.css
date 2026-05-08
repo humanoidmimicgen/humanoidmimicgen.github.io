@@ -239,6 +239,62 @@ body {
   text-align: center;
 }
 
+.planning-demo-block {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planning-demo-copy {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.planning-demo-copy h3 {
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.18;
+  margin: 0 0 1rem;
+}
+
+.planning-demo-copy p {
+  color: var(--ink-mute);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.planning-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.planning-demo-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.planning-demo-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  background: #000;
+}
+
+.planning-demo-card figcaption {
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
 .rollout-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -854,6 +910,7 @@ body {
   .benchmark-task-grid { grid-template-columns: 1fr; }
   .baseline-compare-grid { grid-template-columns: 1fr; }
   .baseline-compare-card figcaption { flex-direction: column; gap: 0.2rem; align-items: center; }
+  .planning-demo-grid { grid-template-columns: 1fr; }
   .rollout-grid { grid-template-columns: 1fr; gap: 1.4rem; }
   .nv-list .row { grid-template-columns: 60px 1fr; gap: 1rem; padding: 1.5rem 0; }
   .nv-list .row h4 { font-size: 1.2rem; }

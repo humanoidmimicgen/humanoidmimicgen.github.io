@@ -66,12 +66,12 @@
             <figcaption><span>PickCanister + Obstruction</span><small>Sim + real success</small></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
-            <figcaption><span>PickCanister</span><small>Sim + real success</small></figcaption>
-          </figure>
-          <figure class="real-carousel-slide" aria-hidden="true">
             <video playsinline loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
             <figcaption><span>ThrowBottle</span><small>Sim + real success</small></figcaption>
+          </figure>
+          <figure class="real-carousel-slide" aria-hidden="true">
+            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
+            <figcaption><span>PickCanister</span><small>Sim + real success</small></figcaption>
           </figure>
         </div>
         <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">&lsaquo;</button>
@@ -80,8 +80,8 @@
       <div class="real-carousel-dots" role="tablist" aria-label="Choose real-world rollout">
         <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show BoxToCart rollout" data-index="0"></button>
         <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister with obstruction rollout" data-index="1"></button>
-        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister rollout" data-index="2"></button>
-        <button type="button" role="tab" aria-selected="false" aria-label="Show ThrowBottle rollout" data-index="3"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show ThrowBottle rollout" data-index="2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show PickCanister rollout" data-index="3"></button>
       </div>
     </div>
   </div>
@@ -131,9 +131,21 @@
     <div class="media-block" style="margin-top: 0;">
       <video playsinline autoplay loop muted src="./resources/method.mp4"></video>
     </div>
-    <div class="media-block">
-      <video playsinline autoplay loop muted src="./resources/planning-variance.mp4"></video>
-      <p class="media-caption">Whole-body planning produces stable, collision-free trajectories across varied object poses.</p>
+    <div class="media-block planning-demo-block">
+      <div class="planning-demo-copy">
+        <h3>Planning enables demonstration generation across substantial object pose and environment variance.</h3>
+        <p>Whole-body planning produces stable, collision-free trajectories across varied object poses.</p>
+      </div>
+      <div class="planning-demo-grid" aria-label="Generated demonstration rollouts">
+        <figure class="planning-demo-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./resources/generated-rollouts/drill-lift.mp4"></video>
+          <figcaption>Drill Lift</figcaption>
+        </figure>
+        <figure class="planning-demo-card">
+          <video playsinline autoplay loop muted preload="metadata" src="./resources/generated-rollouts/drill-lift-obstacle.mp4"></video>
+          <figcaption>Drill Lift Obstacle</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
