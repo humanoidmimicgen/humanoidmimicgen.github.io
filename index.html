@@ -288,7 +288,7 @@
   <div class="nv-container wide">
     <div style="max-width: 720px;">
       <p class="eyebrow">Simulation Results</p>
-      <h2 class="display-2">0.89 average success.</h2>
+      <h2 class="display-2">89% average success.</h2>
       <p class="lede">HumanoidMimicGen reaches the best average success across all nine tasks.</p>
       <hr class="nv-rule">
     </div>
@@ -304,16 +304,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>Box Lift Floor</td><td>0.14</td><td>0.87</td><td>0.83</td><td class="best">0.97</td></tr>
-        <tr><td>Push Button</td><td>0.18</td><td>0.26</td><td>0.82</td><td class="best">0.92</td></tr>
-        <tr><td>Box Lift</td><td>0.95</td><td>0.68</td><td>0.95</td><td class="best">1.00</td></tr>
-        <tr><td>Push Shelf Forward</td><td>0.70</td><td>0.35</td><td>0.90</td><td class="best">1.00</td></tr>
-        <tr><td>Drill Lift</td><td>0.20</td><td>0.13</td><td>0.30</td><td class="best">1.00</td></tr>
-        <tr><td>Drill PnP</td><td>0.08</td><td>0.13</td><td>0.20</td><td class="best">0.70</td></tr>
-        <tr><td>Box Table To Shelf</td><td>0.04</td><td>0.17</td><td>0.28</td><td class="best">0.53</td></tr>
-        <tr><td>Pick Drill From Holder</td><td>0.00</td><td>0.36</td><td>0.07</td><td class="best">1.00</td></tr>
-        <tr><td>Drill Lift Obstacle</td><td>0.04</td><td>0.00</td><td>0.00</td><td class="best">0.87</td></tr>
-        <tr class="summary"><td>Average</td><td>0.26</td><td>0.33</td><td>0.48</td><td class="best">0.89</td></tr>
+        <tr><td>Box Lift Floor</td><td>14%</td><td>87%</td><td>83%</td><td class="best">97%</td></tr>
+        <tr><td>Push Button</td><td>18%</td><td>26%</td><td>82%</td><td class="best">92%</td></tr>
+        <tr><td>Box Lift</td><td>95%</td><td>68%</td><td>95%</td><td class="best">100%</td></tr>
+        <tr><td>Push Shelf Forward</td><td>70%</td><td>35%</td><td>90%</td><td class="best">100%</td></tr>
+        <tr><td>Drill Lift</td><td>20%</td><td>13%</td><td>30%</td><td class="best">100%</td></tr>
+        <tr><td>Drill PnP</td><td>8%</td><td>13%</td><td>20%</td><td class="best">70%</td></tr>
+        <tr><td>Box Table To Shelf</td><td>4%</td><td>17%</td><td>28%</td><td class="best">53%</td></tr>
+        <tr><td>Pick Drill From Holder</td><td>0%</td><td>36%</td><td>7%</td><td class="best">100%</td></tr>
+        <tr><td>Drill Lift Obstacle</td><td>4%</td><td>0%</td><td>0%</td><td class="best">87%</td></tr>
+        <tr class="summary"><td>Average</td><td>26%</td><td>33%</td><td>48%</td><td class="best">89%</td></tr>
       </tbody>
     </table>
     <p class="media-caption">Success rates for policies trained on source demos, DexMimicGen+, 100 human demos, and HumanoidMimicGen data.</p>
@@ -364,11 +364,11 @@
       <h3 class="rollout-heading">HumanoidMimicGen outperforms DexMimicGen+</h3>
       <div class="baseline-compare-grid" aria-label="DexMimicGen+ baseline versus HumanoidMimicGen">
         <figure class="baseline-compare-card">
-          <figcaption><span>DexMimicGen+</span><small>DGR: 0%</small></figcaption>
+          <figcaption><span>DexMimicGen+</span><small>Data generation success: 0%</small></figcaption>
           <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/dexmimicgen-failure.mp4"></video>
         </figure>
         <figure class="baseline-compare-card">
-          <figcaption><span>Humanoid-MG</span><small>DGR: 79%</small></figcaption>
+          <figcaption><span>HumanoidMimicGen</span><small>Data generation success: 79%</small></figcaption>
           <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/humanoidmg-success.mp4"></video>
         </figure>
       </div>
@@ -385,7 +385,7 @@
     <div style="max-width: 760px;">
       <p class="eyebrow">Real-World</p>
       <h2 class="display-2">Sim + real co-training improves every task.</h2>
-      <p class="lede">Adding HumanoidMimicGen simulation data raises real-world success from 0.51 to 0.71 across four tasks.</p>
+      <p class="lede">Adding HumanoidMimicGen simulation data raises real-world success from 51% to 71% across four tasks.</p>
       <hr class="nv-rule">
     </div>
 
@@ -399,8 +399,8 @@
     <!-- BoxToCart -->
     <div class="compare-panel active" data-task="boxtocart">
       <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.60</div>
-        <div class="h">Real Only · 0.35</div>
+        <div class="h cotrain">Sim + Real Co-training · 60%</div>
+        <div class="h">Real Only · 35%</div>
       </div>
       <div class="compare-grid">
         <div class="compare-cell"><span class="badge success">Success</span><video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video></div>
@@ -413,8 +413,8 @@
     <!-- PickCanister + Obstruction -->
     <div class="compare-panel" data-task="pickcanisterobs">
       <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
-        <div class="h">Real Only · 0.60</div>
+        <div class="h cotrain">Sim + Real Co-training · 75%</div>
+        <div class="h">Real Only · 60%</div>
       </div>
       <div class="compare-grid">
         <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video></div>
@@ -427,8 +427,8 @@
     <!-- PickCanister -->
     <div class="compare-panel" data-task="pickcanister">
       <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
-        <div class="h">Real Only · 0.50</div>
+        <div class="h cotrain">Sim + Real Co-training · 75%</div>
+        <div class="h">Real Only · 50%</div>
       </div>
       <div class="compare-grid">
         <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
@@ -441,8 +441,8 @@
     <!-- ThrowBottle -->
     <div class="compare-panel" data-task="throwbottle">
       <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 0.75</div>
-        <div class="h">Real Only · 0.60</div>
+        <div class="h cotrain">Sim + Real Co-training · 75%</div>
+        <div class="h">Real Only · 60%</div>
       </div>
       <div class="compare-grid">
         <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video></div>
@@ -461,11 +461,11 @@
         </tr>
       </thead>
       <tbody style="color: #c7c7cc;">
-        <tr><td style="color:#fff;">BoxToCart</td><td>0.35</td><td class="best" style="color:#fff;">0.60</td></tr>
-        <tr><td style="color:#fff;">PickCanisterWithObstruction</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
-        <tr><td style="color:#fff;">PickCanister</td><td>0.50</td><td class="best" style="color:#fff;">0.75</td></tr>
-        <tr><td style="color:#fff;">ThrowBottle</td><td>0.60</td><td class="best" style="color:#fff;">0.75</td></tr>
-        <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>0.51</td><td class="best" style="color:#fff;">0.71</td></tr>
+        <tr><td style="color:#fff;">BoxToCart</td><td>35%</td><td class="best" style="color:#fff;">60%</td></tr>
+        <tr><td style="color:#fff;">PickCanisterWithObstruction</td><td>60%</td><td class="best" style="color:#fff;">75%</td></tr>
+        <tr><td style="color:#fff;">PickCanister</td><td>50%</td><td class="best" style="color:#fff;">75%</td></tr>
+        <tr><td style="color:#fff;">ThrowBottle</td><td>60%</td><td class="best" style="color:#fff;">75%</td></tr>
+        <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>51%</td><td class="best" style="color:#fff;">71%</td></tr>
       </tbody>
     </table>
     <p class="media-caption" style="color:#86868b;">Sim + real co-training beats real-only training across all four tasks.</p>
