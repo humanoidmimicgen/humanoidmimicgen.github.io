@@ -38,7 +38,7 @@
       Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation
     </h1>
     <p class="lede" style="max-width: 720px; margin: 0 auto;">
-      An automated data-generation algorithm for humanoid loco-manipulation — synthesizing thousands of demonstrations from a handful of human teleoperated examples.
+      Generate thousands of humanoid loco-manipulation demos from a handful of teleoperated examples.
     </p>
   </div>
 </section>
@@ -49,8 +49,7 @@
   <div class="nv-container wide">
     <div style="max-width: 760px;">
       <p class="eyebrow">Real-World Results</p>
-      <h2 class="display-2">HumanoidMimicGen enables hardware success.</h2>
-      <p class="lede">Co-trained policies succeed across four real-world tasks, showing how generated simulation data transfers to physical humanoid rollouts.</p>
+      <h2 class="display-2">HumanoidMimicGen-generated data improves real world policy performance.</h2>
       <hr class="nv-rule">
     </div>
 
@@ -59,19 +58,23 @@
         <div class="real-carousel-track">
           <figure class="real-carousel-slide active" aria-hidden="false">
             <video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
-            <figcaption><span>BoxToCart</span><small>Sim + real success</small></figcaption>
+            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <figcaption><span>BoxToCart</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
             <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
-            <figcaption><span>PickCanister + Obstruction</span><small>Sim + real success</small></figcaption>
+            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <figcaption><span>PickCanister + Obstruction</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
             <video playsinline loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
-            <figcaption><span>ThrowBottle</span><small>Sim + real success</small></figcaption>
+            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <figcaption><span>ThrowBottle</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
             <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
-            <figcaption><span>PickCanister</span><small>Sim + real success</small></figcaption>
+            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <figcaption><span>PickCanister</span></figcaption>
           </figure>
         </div>
         <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">&lsaquo;</button>
@@ -96,13 +99,13 @@
     <hr class="nv-rule">
     <div class="body-text">
       <p>
-        Imitation learning is a promising approach for training humanoid robots to simultaneously walk and manipulate, but it requires a large number of demonstrations, which are time-intensive and difficult to collect via teleoperation. Existing data-generation algorithms can automatically synthesize demonstrations for manipulators, but they struggle to directly transfer to humanoids because their high-dimensional composite action spaces involve arms, legs, and torsos.
+        Imitation learning can train humanoids to walk and manipulate, but teleoperated demos are expensive. Existing data-generation methods work well for arms, but transfer poorly to humanoids with coupled arms, legs, and torso control.
       </p>
       <p>
-        We present <strong>HumanoidMimicGen</strong>, an algorithm for generating humanoid legged loco-manipulation data. Our algorithm adapts contact-rich whole-body skills from a handful of source demonstrations to new states, generalizing across changes in object pose. By interleaving these single- and dual-arm skills with whole-body locomotion and manipulation planning, the method generates stable, collision-free data across diverse scenes and layouts.
+        <strong>HumanoidMimicGen</strong> generates humanoid loco-manipulation data by adapting contact-rich whole-body skills from a few source demos to new states and object poses. It interleaves single- and dual-arm skills with locomotion and manipulation planning to produce stable trajectories in varied layouts.
       </p>
       <p>
-        To evaluate our approach, we developed a new simulated loco-manipulation benchmark. We demonstrate that HumanoidMimicGen automatically generates large datasets for imitation learning and enables a systematic study of how data-generation and policy-learning decisions impact model performance. We show that a small amount of real-world data along with HumanoidMimicGen data can effectively train capable real-world whole-body visuomotor policies.
+        We evaluate on a new simulated G1 loco-manipulation benchmark and study how data generation and policy design affect success. We also show that co-training policies on HumanoidMimicGen-generated data to a small real-world dataset outperforms those trained only on the real-world data by 20%.
       </p>
     </div>
   </div>
@@ -113,14 +116,14 @@
 <section class="nv-section dark" id="method">
   <div class="nv-container">
     <p class="eyebrow">Method</p>
-    <h2 class="display-2">Whole-body planning meets skill adaptation.</h2>
+    <h2 class="display-2">Skill adaptation plus whole-body planning.</h2>
     <hr class="nv-rule">
     <div class="body-text" style="max-width: 760px;">
       <p>
-        HumanoidMimicGen takes a source demonstration with per-arm skill annotations and constraints governing the order of base and arm execution. The skill annotations and constraints determine an execution order and a target end-effector pose for the beginning of each skill.
+        HumanoidMimicGen starts from a single source demonstration with per-arm skill annotations and ordering constraints. These annotations define when the base and arms move, and the target end-effector pose for each skill.
       </p>
       <p>
-        The <strong>Whole-Body Planning</strong> process constructs a decoupled locomotion plan and per-arm plan to achieve the targets, executed by the whole-body controller and upper-body controller respectively. We adopt a <strong>hybrid action space</strong>: the upper body is governed by a joint-space controller, while the lower body is commanded by a reinforcement-learning policy trained to control pelvis velocity.
+        <strong>Whole-body planning</strong> builds a locomotion plan and per-arm plans to reach those targets. The upper body uses joint-space control; the lower body follows pelvis-velocity commands from a learned locomotion policy.
       </p>
     </div>
   </div>
@@ -133,8 +136,8 @@
     </div>
     <div class="media-block planning-demo-block">
       <div class="planning-demo-copy">
-        <h3>Planning enables demonstration generation across substantial object pose and environment variance.</h3>
-        <p>Whole-body planning produces stable, collision-free trajectories across varied object poses.</p>
+        <h3>Planning generates demos across new object poses and obstacle layouts.</h3>
+        <p>Whole-body planning keeps the robot stable while the task setup changes.</p>
       </div>
       <div class="planning-demo-grid" aria-label="Generated demonstration rollouts">
         <figure class="planning-demo-card">
@@ -155,7 +158,7 @@
 <section class="nv-section alt" id="contributions">
   <div class="nv-container">
     <p class="eyebrow">Contributions</p>
-    <h2 class="display-2">What we built.</h2>
+    <h2 class="display-2">Method, benchmark, and hardware results.</h2>
     <hr class="nv-rule">
 
     <div class="nv-list">
@@ -163,28 +166,28 @@
         <div class="num">01</div>
         <div>
           <h4>HumanoidMimicGen Algorithm</h4>
-          <p>An automated data-generation algorithm for humanoids that uses whole-body skill adaptation and planning to synthesize loco-manipulation demonstrations from just a few human demonstrations.</p>
+          <p>A data-generation method that turns a few humanoid teleoperation demos into many planned loco-manipulation trajectories.</p>
         </div>
       </div>
       <div class="row">
         <div class="num">02</div>
         <div>
           <h4>G1 Loco-Manipulation Benchmark</h4>
-          <p>A new benchmark suite of 9 simulated G1 humanoid loco-manipulation tasks, enabling reproducible comparison across methods.</p>
+          <p>Nine simulated G1 loco-manipulation tasks for comparing data-generation and policy-learning methods.</p>
         </div>
       </div>
       <div class="row">
         <div class="num">03</div>
         <div>
           <h4>Policy Learning Analysis</h4>
-          <p>Experiments studying the effect of noise types, data-generation algorithms, and model architectures on policy success rates.</p>
+          <p>Experiments on noise, data-generation methods, and model architectures for policy learning.</p>
         </div>
       </div>
       <div class="row">
         <div class="num">04</div>
         <div>
           <h4>Sim-and-Real Co-Training</h4>
-          <p>Real-world results demonstrating that HumanoidMimicGen data benefits real-world policy performance through sim + real co-training.</p>
+          <p>Hardware experiments showing that sim + real co-training improves real-world success rates.</p>
         </div>
       </div>
     </div>
@@ -198,7 +201,7 @@
     <div style="max-width: 720px;">
       <p class="eyebrow">Benchmark</p>
       <h2 class="display-2">Nine industrial humanoid tasks.</h2>
-      <p class="lede">Spanning diverse loco-manipulation challenges on the Unitree G1.</p>
+      <p class="lede">Object lifting, pushing, placing, obstacle navigation, and shelf interaction on the Unitree G1.</p>
       <hr class="nv-rule">
     </div>
 
@@ -286,7 +289,7 @@
     <div style="max-width: 720px;">
       <p class="eyebrow">Simulation Results</p>
       <h2 class="display-2">0.89 average success.</h2>
-      <p class="lede">HumanoidMimicGen consistently outperforms baselines across all nine tasks.</p>
+      <p class="lede">HumanoidMimicGen reaches the best average success across all nine tasks.</p>
       <hr class="nv-rule">
     </div>
 
@@ -313,11 +316,11 @@
         <tr class="summary"><td>Average</td><td>0.26</td><td>0.33</td><td>0.48</td><td class="best">0.89</td></tr>
       </tbody>
     </table>
-    <p class="media-caption">Success rates across benchmark tasks for policies trained on source human demonstrations, DexMimicGen+, 100 human demonstrations, and HumanoidMimicGen datasets.</p>
+    <p class="media-caption">Success rates for policies trained on source demos, DexMimicGen+, 100 human demos, and HumanoidMimicGen data.</p>
 
     <div class="media-block">
       <h3 class="rollout-heading">Policy rollouts</h3>
-      <div class="rollout-grid" aria-label="Policy rollouts on G1 humanoid benchmark tasks">
+      <div class="rollout-grid" data-playback-rate="2" aria-label="Policy rollouts on G1 humanoid benchmark tasks">
         <figure class="rollout-card">
           <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMBoxLiftFloor.mp4"></video>
           <figcaption><span class="rollout-title">Box Lift Floor</span><span class="rollout-rate">Success Rate: 97%</span></figcaption>
@@ -369,7 +372,7 @@
           <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/humanoidmg-success.mp4"></video>
         </figure>
       </div>
-      <p class="media-caption">Side-by-side raw rollouts comparing DexMimicGen+ against HumanoidMimicGen.</p>
+      <p class="media-caption">Raw rollouts from DexMimicGen+ and HumanoidMimicGen.</p>
     </div>
 
   </div>
@@ -381,8 +384,8 @@
   <div class="nv-container wide">
     <div style="max-width: 760px;">
       <p class="eyebrow">Real-World</p>
-      <h2 class="display-2">Sim + real co-training wins on every task.</h2>
-      <p class="lede">Co-training with HumanoidMimicGen simulation data lifts real-world policy success from 0.51 to 0.71 across four tasks. Watch the same task side by side — co-trained policies recover where real-only ones fail.</p>
+      <h2 class="display-2">Sim + real co-training improves every task.</h2>
+      <p class="lede">Adding HumanoidMimicGen simulation data raises real-world success from 0.51 to 0.71 across four tasks.</p>
       <hr class="nv-rule">
     </div>
 
@@ -465,7 +468,7 @@
         <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>0.51</td><td class="best" style="color:#fff;">0.71</td></tr>
       </tbody>
     </table>
-    <p class="media-caption" style="color:#86868b;">Policies co-trained on HumanoidMimicGen-generated simulation data and real-world demonstrations outperform real-only training across all four tasks.</p>
+    <p class="media-caption" style="color:#86868b;">Sim + real co-training beats real-only training across all four tasks.</p>
   </div>
 </section>
 
@@ -515,6 +518,23 @@
     } else {
       els.forEach(function (el) { el.classList.add('in'); });
     }
+  })();
+
+  // Policy rollout videos
+  (function () {
+    var grid = document.querySelector('.rollout-grid[data-playback-rate]');
+    if (!grid) return;
+
+    var rate = parseFloat(grid.dataset.playbackRate) || 1;
+    grid.querySelectorAll('video').forEach(function (video) {
+      function setRate() {
+        video.defaultPlaybackRate = rate;
+        video.playbackRate = rate;
+      }
+      setRate();
+      video.addEventListener('loadedmetadata', setRate);
+      video.addEventListener('play', setRate);
+    });
   })();
 
   // Real-world video carousel

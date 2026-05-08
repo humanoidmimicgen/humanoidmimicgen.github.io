@@ -638,17 +638,31 @@ body {
   line-height: 1;
 }
 
-.real-carousel-slide figcaption small {
-  color: #d1d1d6;
-  font-size: 0.95rem;
+.real-carousel-meta {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: #f5f5f7;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.38);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 999px;
+  padding: 0.45rem 0.65rem;
+  backdrop-filter: blur(8px);
 }
 
 .real-carousel-arrow {
   position: absolute;
   top: 50%;
   z-index: 3;
+  display: grid;
+  place-items: center;
   width: 2.75rem;
   height: 2.75rem;
   transform: translateY(-50%);
@@ -659,9 +673,13 @@ body {
   font: inherit;
   font-size: 2rem;
   line-height: 1;
+  padding: 0;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
+
+.real-carousel-arrow.prev { text-indent: -0.08em; }
+.real-carousel-arrow.next { text-indent: 0.08em; }
 
 .real-carousel-arrow:hover {
   background: rgba(118, 185, 0, 0.55);
