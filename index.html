@@ -38,7 +38,7 @@
       Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation
     </h1>
     <p class="lede" style="max-width: 720px; margin: 0 auto;">
-      Generate thousands of humanoid loco-manipulation demos from a handful of teleoperated examples.
+      Generate thousands of humanoid loco-manipulation demonstrations from a single teleoperated demonstration.
     </p>
   </div>
 </section>
@@ -57,28 +57,28 @@
       <div class="real-carousel-viewport">
         <div class="real-carousel-track">
           <figure class="real-carousel-slide active" aria-hidden="false">
-            <video playsinline autoplay loop muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
+            <video playsinline autoplay muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
             <div class="real-carousel-meta">1x speed | autonomous</div>
             <figcaption><span>BoxToCart</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
+            <video playsinline muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
             <div class="real-carousel-meta">1x speed | autonomous</div>
             <figcaption><span>PickCanister + Obstruction</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
+            <video playsinline muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
             <div class="real-carousel-meta">1x speed | autonomous</div>
             <figcaption><span>ThrowBottle</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
+            <video playsinline muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
             <div class="real-carousel-meta">1x speed | autonomous</div>
             <figcaption><span>PickCanister</span></figcaption>
           </figure>
         </div>
-        <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">&lsaquo;</button>
-        <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout">&rsaquo;</button>
+        <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">‹</button>
+        <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout">›</button>
       </div>
       <div class="real-carousel-dots" role="tablist" aria-label="Choose real-world rollout">
         <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show BoxToCart rollout" data-index="0"></button>
@@ -105,7 +105,7 @@
         <strong>HumanoidMimicGen</strong> generates humanoid loco-manipulation data by adapting contact-rich whole-body skills from a few source demos to new states and object poses. It interleaves single- and dual-arm skills with locomotion and manipulation planning to produce stable trajectories in varied layouts.
       </p>
       <p>
-        We evaluate on a new simulated G1 loco-manipulation benchmark and study how data generation and policy design affect success. We also show that co-training policies on HumanoidMimicGen-generated data to a small real-world dataset outperforms those trained only on the real-world data by 20%.
+        We evaluate on a new simulated G1 loco-manipulation benchmark and study how data generation and policy design affect success. We also show that co-training policies on HumanoidMimicGen-generated data with a small real-world dataset outperforms those trained only on the real-world data by 20%.
       </p>
     </div>
   </div>
@@ -549,6 +549,7 @@
     var next = carousel.querySelector('.real-carousel-arrow.next');
     var current = 0;
     var timer = null;
+    var paused = false;
 
     function playVideo(video, restart) {
       if (restart) {
@@ -582,15 +583,31 @@
 
     function start() {
       stop();
-      timer = window.setInterval(function () {
+      var video = slides[current].querySelector('video');
+      var delay = 6500;
+      if (video && Number.isFinite(video.duration) && video.duration > 0) {
+        delay = Math.max(500, (video.duration - video.currentTime) * 1000 + 250);
+      }
+      timer = window.setTimeout(function () {
         show((current + 1) % slides.length, true);
-      }, 6500);
+        if (!paused && !document.hidden) start();
+      }, delay);
     }
 
     function stop() {
-      if (timer) window.clearInterval(timer);
+      if (timer) window.clearTimeout(timer);
       timer = null;
     }
+
+    slides.forEach(function (slide, i) {
+      var video = slide.querySelector('video');
+      video.addEventListener('ended', function () {
+        if (i !== current || paused || document.hidden) return;
+        stop();
+        show(current + 1, true);
+        start();
+      });
+    });
 
     dots.forEach(function (button, i) {
       button.addEventListener('click', function () {
@@ -608,8 +625,14 @@
       start();
     });
 
-    carousel.addEventListener('mouseenter', stop);
-    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('mouseenter', function () {
+      paused = true;
+      stop();
+    });
+    carousel.addEventListener('mouseleave', function () {
+      paused = false;
+      start();
+    });
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
         stop();
