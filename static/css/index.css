@@ -306,10 +306,10 @@ body {
   left: 0;
   right: 0;
   margin: 0;
-  padding: 1.1rem 2rem;
+  padding: 1rem 1.5rem;
   background: rgba(245,245,247,0.82);
   color: #111;
-  font-size: clamp(1.35rem, 3vw, 3rem);
+  font-size: clamp(1.35rem, 2.6vw, 2.55rem);
   font-weight: 400;
   line-height: 1.08;
   text-align: center;
