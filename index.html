@@ -35,7 +35,7 @@
     <p class="eyebrow">CoRL 2026 — Under Review</p>
     <h1 class="display-1">
       <span class="accent">HumanoidMimicGen</span><br>
-      Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation
+      <span class="hero-title-detail">Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation</span>
     </h1>
     <p class="lede" style="max-width: 720px; margin: 0 auto;">
       Generate thousands of humanoid loco-manipulation demonstrations from a single teleoperated demonstration.
@@ -50,35 +50,72 @@
     <div style="max-width: 760px;">
       <p class="eyebrow">Real-World Results</p>
       <h2 class="display-2">HumanoidMimicGen-generated data improves real world policy performance.</h2>
+      <p class="lede">Each task pairs a co-trained success with a real-only failure on the same hardware setup.</p>
       <hr class="nv-rule">
     </div>
 
-    <div class="real-carousel" role="region" aria-roledescription="carousel" aria-label="Real-world HumanoidMimicGen success rollouts">
+    <div class="real-carousel" role="region" aria-roledescription="carousel" aria-label="Real-world HumanoidMimicGen versus real-only rollouts">
       <div class="real-carousel-viewport">
         <div class="real-carousel-track">
           <figure class="real-carousel-slide active" aria-hidden="false">
-            <video playsinline autoplay muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
-            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <div class="real-carousel-pair">
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading success"><strong>Co-trained policy</strong><small>HumanoidMimicGen data + real robot data</small><em>Success</em></div>
+                <video playsinline autoplay muted preload="metadata" src="./resources/real-world/boxtocart-cotrain-success.mp4"></video>
+              </div>
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading fail"><strong>Real-only policy</strong><small>Real robot data only</small><em>Failure</em></div>
+                <video playsinline loop muted preload="metadata" src="./resources/real-world/boxtocart-realonly-fail2.mp4"></video>
+              </div>
+            </div>
+            <div class="real-carousel-meta">Autonomous | 1x speed</div>
             <figcaption><span>BoxToCart</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
-            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <div class="real-carousel-pair">
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading success"><strong>Co-trained policy</strong><small>HumanoidMimicGen data + real robot data</small><em>Success</em></div>
+                <video playsinline muted preload="metadata" src="./resources/real-world/pickcanisterobs-cotrain-success.mp4"></video>
+              </div>
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading fail"><strong>Real-only policy</strong><small>Real robot data only</small><em>Failure</em></div>
+                <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanisterobs-realonly-fail.mp4"></video>
+              </div>
+            </div>
+            <div class="real-carousel-meta">Autonomous | 1x speed</div>
             <figcaption><span>PickCanister + Obstruction</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
-            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <div class="real-carousel-pair">
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading success"><strong>Co-trained policy</strong><small>HumanoidMimicGen data + real robot data</small><em>Success</em></div>
+                <video playsinline muted preload="metadata" src="./resources/real-world/throwbottle-cotrain-success.mp4"></video>
+              </div>
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading fail"><strong>Real-only policy</strong><small>Real robot data only</small><em>Failure</em></div>
+                <video playsinline loop muted preload="metadata" src="./resources/real-world/throwbottle-realonly-fail.mp4"></video>
+              </div>
+            </div>
+            <div class="real-carousel-meta">Autonomous | 1x speed</div>
             <figcaption><span>ThrowBottle</span></figcaption>
           </figure>
           <figure class="real-carousel-slide" aria-hidden="true">
-            <video playsinline muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
-            <div class="real-carousel-meta">1x speed | autonomous</div>
+            <div class="real-carousel-pair">
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading success"><strong>Co-trained policy</strong><small>HumanoidMimicGen data + real robot data</small><em>Success</em></div>
+                <video playsinline muted preload="metadata" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video>
+              </div>
+              <div class="real-carousel-cell">
+                <div class="real-carousel-cell-heading fail"><strong>Real-only policy</strong><small>Real robot data only</small><em>Failure</em></div>
+                <video playsinline loop muted preload="metadata" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video>
+              </div>
+            </div>
+            <div class="real-carousel-meta">Autonomous | 1x speed</div>
             <figcaption><span>PickCanister</span></figcaption>
           </figure>
         </div>
-        <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout">‹</button>
-        <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout">›</button>
+        <button class="real-carousel-arrow prev" type="button" aria-label="Previous real-world rollout"></button>
+        <button class="real-carousel-arrow next" type="button" aria-label="Next real-world rollout"></button>
       </div>
       <div class="real-carousel-dots" role="tablist" aria-label="Choose real-world rollout">
         <button class="active" type="button" role="tab" aria-selected="true" aria-label="Show BoxToCart rollout" data-index="0"></button>
@@ -131,8 +168,32 @@
 
 <section class="nv-section compact">
   <div class="nv-container wide">
-    <div class="media-block" style="margin-top: 0;">
-      <video playsinline autoplay loop muted src="./resources/method.mp4"></video>
+    <div class="media-block method-video-block" style="margin-top: 0;" data-method-phase="manipulation">
+      <video class="method-video" playsinline autoplay loop muted src="./resources/method.mp4"></video>
+      <div class="method-overlay" aria-hidden="true">
+        <h3 class="method-overlay-title">
+          HumanoidMimicGen generates data by interleaving
+          <span class="term locomotion">locomotion planning</span>,
+          <span class="term manipulation">manipulation planning</span>, and demonstrated
+          <span class="term skill">skill adaptation</span>
+        </h3>
+        <div class="method-flow">
+          <div class="method-step locomotion">
+            <span>Locomotion<br>Planning</span>
+            <img src="./resources/method-icons/locomotion.png" alt="">
+          </div>
+          <div class="method-flow-arrow" aria-hidden="true"></div>
+          <div class="method-step manipulation">
+            <span>Manipulation<br>Planning</span>
+            <img src="./resources/method-icons/manipulation.png" alt="">
+          </div>
+          <div class="method-flow-arrow" aria-hidden="true"></div>
+          <div class="method-step skill">
+            <span>Skill<br>Adaptation</span>
+            <img src="./resources/method-icons/skill.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="media-block planning-demo-block">
       <div class="planning-demo-copy">
@@ -146,7 +207,7 @@
         </figure>
         <figure class="planning-demo-card">
           <video playsinline autoplay loop muted preload="metadata" src="./resources/generated-rollouts/drill-lift-obstacle.mp4"></video>
-          <figcaption>Drill Lift Obstacle</figcaption>
+          <figcaption>Drill Lift with Obstacle</figcaption>
         </figure>
       </div>
     </div>
@@ -271,10 +332,10 @@
         </figcaption>
       </figure>
       <figure class="benchmark-task-figure">
-        <img src="./resources/benchmark-tasks/drill-lift-obstacle.png" alt="Drill Lift Obstacle task snapshots">
+        <img src="./resources/benchmark-tasks/drill-lift-obstacle.png" alt="Drill Lift with Obstacle task snapshots">
         <figcaption>
           <span class="benchmark-task-num">09</span>
-          <span class="benchmark-task-title">Drill Lift Obstacle</span>
+          <span class="benchmark-task-title">Drill Lift with Obstacle</span>
           <span class="benchmark-task-desc">Navigate around a blocking shelf, then grasp and lift the drill.</span>
         </figcaption>
       </figure>
@@ -297,26 +358,26 @@
       <thead>
         <tr>
           <th>Task</th>
-          <th>Src Demo</th>
-          <th>DexMimicGen+</th>
-          <th>Human Demos</th>
-          <th>Ours</th>
+          <th>1 Human Demo</th>
+          <th>100 Human Demos</th>
+          <th>DexMimicGen+ (1k Generated)</th>
+          <th>Ours (1k Generated)</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Box Lift Floor</td><td>14%</td><td>87%</td><td>83%</td><td class="best">97%</td></tr>
-        <tr><td>Push Button</td><td>18%</td><td>26%</td><td>82%</td><td class="best">92%</td></tr>
-        <tr><td>Box Lift</td><td>95%</td><td>68%</td><td>95%</td><td class="best">100%</td></tr>
-        <tr><td>Push Shelf Forward</td><td>70%</td><td>35%</td><td>90%</td><td class="best">100%</td></tr>
-        <tr><td>Drill Lift</td><td>20%</td><td>13%</td><td>30%</td><td class="best">100%</td></tr>
-        <tr><td>Drill PnP</td><td>8%</td><td>13%</td><td>20%</td><td class="best">70%</td></tr>
-        <tr><td>Box Table To Shelf</td><td>4%</td><td>17%</td><td>28%</td><td class="best">53%</td></tr>
-        <tr><td>Pick Drill From Holder</td><td>0%</td><td>36%</td><td>7%</td><td class="best">100%</td></tr>
-        <tr><td>Drill Lift Obstacle</td><td>4%</td><td>0%</td><td>0%</td><td class="best">87%</td></tr>
-        <tr class="summary"><td>Average</td><td>26%</td><td>33%</td><td>48%</td><td class="best">89%</td></tr>
+        <tr><td>Box Lift Floor</td><td>14%</td><td>83%</td><td>87%</td><td class="best">97%</td></tr>
+        <tr><td>Push Button</td><td>18%</td><td>82%</td><td>26%</td><td class="best">92%</td></tr>
+        <tr><td>Box Lift</td><td>95%</td><td>95%</td><td>68%</td><td class="best">100%</td></tr>
+        <tr><td>Push Shelf Forward</td><td>70%</td><td>90%</td><td>35%</td><td class="best">100%</td></tr>
+        <tr><td>Drill Lift</td><td>20%</td><td>30%</td><td>13%</td><td class="best">100%</td></tr>
+        <tr><td>Drill PnP</td><td>8%</td><td>20%</td><td>13%</td><td class="best">70%</td></tr>
+        <tr><td>Box Table To Shelf</td><td>4%</td><td>28%</td><td>17%</td><td class="best">53%</td></tr>
+        <tr><td>Pick Drill From Holder</td><td>0%</td><td>7%</td><td>36%</td><td class="best">100%</td></tr>
+        <tr><td>Drill Lift with Obstacle</td><td>4%</td><td>0%</td><td>0%</td><td class="best">87%</td></tr>
+        <tr class="summary"><td>Average</td><td>26%</td><td>48%</td><td>33%</td><td class="best">89%</td></tr>
       </tbody>
     </table>
-    <p class="media-caption">Success rates for policies trained on source demos, DexMimicGen+, 100 human demos, and HumanoidMimicGen data.</p>
+    <p class="media-caption">Success rates for policies trained on 1 human demo, 100 human demos, or 1,000 generated demos from the same single source demo.</p>
 
     <div class="media-block">
       <h3 class="rollout-heading">Policy rollouts</h3>
@@ -355,7 +416,7 @@
         </figure>
         <figure class="rollout-card">
           <video playsinline autoplay loop muted preload="metadata" src="./Rendering/Rollouts/LMDrillLiftObstacle.mp4"></video>
-          <figcaption><span class="rollout-title">Drill Lift Obstacle</span><span class="rollout-rate">Success Rate: 87%</span></figcaption>
+          <figcaption><span class="rollout-title">Drill Lift with Obstacle</span><span class="rollout-rate">Success Rate: 87%</span></figcaption>
         </figure>
       </div>
     </div>
@@ -364,15 +425,21 @@
       <h3 class="rollout-heading">HumanoidMimicGen outperforms DexMimicGen+</h3>
       <div class="baseline-compare-grid" aria-label="DexMimicGen+ baseline versus HumanoidMimicGen">
         <figure class="baseline-compare-card">
-          <figcaption><span>DexMimicGen+</span><small>Data generation success: 0%</small></figcaption>
-          <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/dexmimicgen-failure.mp4"></video>
+          <figcaption><a href="https://dexmimicgen.github.io/" target="_blank" rel="noopener">DexMimicGen+</a><small>1 source demo → 1k generated · success: 0%</small></figcaption>
+          <div class="baseline-video-wrap">
+            <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/dexmimicgen-failure.mp4"></video>
+            <span>Data generation rollout | 2x speed</span>
+          </div>
         </figure>
         <figure class="baseline-compare-card">
-          <figcaption><span>HumanoidMimicGen</span><small>Data generation success: 79%</small></figcaption>
-          <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/humanoidmg-success.mp4"></video>
+          <figcaption><span>HumanoidMimicGen</span><small>1 source demo → 1k generated · success: 79%</small></figcaption>
+          <div class="baseline-video-wrap">
+            <video playsinline autoplay loop muted preload="metadata" src="./resources/baseline-comparison/humanoidmg-success.mp4"></video>
+            <span>Data generation rollout | 2x speed</span>
+          </div>
         </figure>
       </div>
-      <p class="media-caption">Raw rollouts from DexMimicGen+ and HumanoidMimicGen.</p>
+      <p class="media-caption">Both methods start from the same single source demonstration and attempt to generate 1,000 demonstrations. DexMimicGen+ extends DexMimicGen to output locomotion commands, but greedily adapts full demonstrations without skill reasoning, motion planning, or collision checking. HumanoidMimicGen plans locomotion and arm motion before replaying adapted skills, which is why it handles the obstructed setup.</p>
     </div>
 
   </div>
@@ -392,8 +459,8 @@
     <div class="compare-tabs" role="tablist">
       <button class="active" data-task="boxtocart">BoxToCart</button>
       <button data-task="pickcanisterobs">PickCanister + Obstruction</button>
-      <button data-task="pickcanister">PickCanister</button>
       <button data-task="throwbottle">ThrowBottle</button>
+      <button data-task="pickcanister">PickCanister</button>
     </div>
 
     <!-- BoxToCart -->
@@ -424,20 +491,6 @@
       </div>
     </div>
 
-    <!-- PickCanister -->
-    <div class="compare-panel" data-task="pickcanister">
-      <div class="compare-headers">
-        <div class="h cotrain">Sim + Real Co-training · 75%</div>
-        <div class="h">Real Only · 50%</div>
-      </div>
-      <div class="compare-grid">
-        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail2.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-fail.mp4"></video></div>
-        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video></div>
-      </div>
-    </div>
-
     <!-- ThrowBottle -->
     <div class="compare-panel" data-task="throwbottle">
       <div class="compare-headers">
@@ -452,6 +505,20 @@
       </div>
     </div>
 
+    <!-- PickCanister -->
+    <div class="compare-panel" data-task="pickcanister">
+      <div class="compare-headers">
+        <div class="h cotrain">Sim + Real Co-training · 75%</div>
+        <div class="h">Real Only · 50%</div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-cell"><span class="badge success">Success</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-success.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail2.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-cotrain-fail.mp4"></video></div>
+        <div class="compare-cell"><span class="badge fail">Failure</span><video playsinline loop muted preload="none" src="./resources/real-world/pickcanister-realonly-fail.mp4"></video></div>
+      </div>
+    </div>
+
     <table class="nv-table" style="max-width: 760px; margin: 4rem auto 0;">
       <thead>
         <tr>
@@ -460,15 +527,15 @@
           <th>Sim + Real</th>
         </tr>
       </thead>
-      <tbody style="color: #c7c7cc;">
-        <tr><td style="color:#fff;">BoxToCart</td><td>35%</td><td class="best" style="color:#fff;">60%</td></tr>
-        <tr><td style="color:#fff;">PickCanisterWithObstruction</td><td>60%</td><td class="best" style="color:#fff;">75%</td></tr>
-        <tr><td style="color:#fff;">PickCanister</td><td>50%</td><td class="best" style="color:#fff;">75%</td></tr>
-        <tr><td style="color:#fff;">ThrowBottle</td><td>60%</td><td class="best" style="color:#fff;">75%</td></tr>
-        <tr class="summary" style="color:#fff;"><td style="color:#fff;">Average</td><td>51%</td><td class="best" style="color:#fff;">71%</td></tr>
+      <tbody>
+        <tr><td>BoxToCart</td><td>35%</td><td class="best">60%</td></tr>
+        <tr><td>PickCanisterWithObstruction</td><td>60%</td><td class="best">75%</td></tr>
+        <tr><td>ThrowBottle</td><td>60%</td><td class="best">75%</td></tr>
+        <tr><td>PickCanister</td><td>50%</td><td class="best">75%</td></tr>
+        <tr class="summary"><td>Average</td><td>51%</td><td class="best">71%</td></tr>
       </tbody>
     </table>
-    <p class="media-caption" style="color:#86868b;">Sim + real co-training beats real-only training across all four tasks.</p>
+    <p class="media-caption">Sim + real co-training beats real-only training across all four tasks.</p>
   </div>
 </section>
 
@@ -537,6 +604,35 @@
     });
   })();
 
+  // Method video overlay
+  (function () {
+    var block = document.querySelector('.method-video-block');
+    if (!block) return;
+
+    var video = block.querySelector('.method-video');
+    if (!video) return;
+
+    function syncPhase() {
+      var t = video.currentTime || 0;
+      var phase = 'manipulation';
+      if (t >= 13.125) {
+        phase = 'skill';
+      } else if (t >= 12.125) {
+        phase = 'manipulation';
+      } else if (t >= 4.131) {
+        phase = 'locomotion';
+      } else if (t >= 1.631) {
+        phase = 'skill';
+      }
+      block.dataset.methodPhase = phase;
+    }
+
+    syncPhase();
+    video.addEventListener('timeupdate', syncPhase);
+    video.addEventListener('seeked', syncPhase);
+    video.addEventListener('loadedmetadata', syncPhase);
+  })();
+
   // Real-world video carousel
   (function () {
     var carousel = document.querySelector('.real-carousel');
@@ -550,6 +646,10 @@
     var current = 0;
     var timer = null;
     var paused = false;
+
+    function getVideos(slide) {
+      return Array.prototype.slice.call(slide.querySelectorAll('video'));
+    }
 
     function playVideo(video, restart) {
       if (restart) {
@@ -565,13 +665,13 @@
       track.style.transform = 'translateX(' + (-100 * index) + '%)';
       slides.forEach(function (slide, i) {
         var active = i === index;
-        var video = slide.querySelector('video');
+        var videos = getVideos(slide);
         slide.classList.toggle('active', active);
         slide.setAttribute('aria-hidden', active ? 'false' : 'true');
         if (active) {
-          playVideo(video, restart);
+          videos.forEach(function (video) { playVideo(video, restart); });
         } else {
-          video.pause();
+          videos.forEach(function (video) { video.pause(); });
         }
       });
       dots.forEach(function (button, i) {
@@ -583,7 +683,7 @@
 
     function start() {
       stop();
-      var video = slides[current].querySelector('video');
+      var video = getVideos(slides[current])[0];
       var delay = 6500;
       if (video && Number.isFinite(video.duration) && video.duration > 0) {
         delay = Math.max(500, (video.duration - video.currentTime) * 1000 + 250);
@@ -600,7 +700,7 @@
     }
 
     slides.forEach(function (slide, i) {
-      var video = slide.querySelector('video');
+      var video = getVideos(slide)[0];
       video.addEventListener('ended', function () {
         if (i !== current || paused || document.hidden) return;
         stop();
