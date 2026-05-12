@@ -192,8 +192,8 @@ body {
 
 .hero-title-detail {
   display: inline-block;
-  max-width: 980px;
-  font-size: clamp(2rem, 4.2vw, 3.55rem);
+  max-width: 1280px;
+  font-size: clamp(1.55rem, 3vw, 2.95rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
 }
